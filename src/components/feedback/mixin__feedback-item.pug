@@ -1,0 +1,21 @@
+mixin feedback-item(args={})
+	+include-style('feedback')
+	.feedback-item
+		.feedback-item__head
+			+lazy-img({
+				img: args.src,
+				placeholder: pixel,
+				img_mod: 'pers-photo',
+				wrap_mod: 'pers-photo-wrap',
+				link: false,
+				aria_label: false,
+			}) 
+			.pers-desrc
+				.date=args.date
+				
+				.pers-name=args.name
+				+rating({
+					value: args.reiting
+				})
+		.feedback-item__body
+			span=args.body

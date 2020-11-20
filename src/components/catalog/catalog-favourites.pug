@@ -1,0 +1,100 @@
++include-style('catalog')
++include-script('catalog')
++include-style('sidebar')
+.catalog
+	.container
+		.row
+			.col-md-12.col-xl-3
+				+custom-select({
+					items: [
+						{
+							value: 'Парфюмерия',
+							counter: '123'
+						}, {
+							value: 'Косметика',
+							counter: '112'
+						}, {
+							value: 'Уход за кожей',
+							counter: '132'
+						}, {
+							value: 'Бытовая химия',
+							counter: '12'
+						},
+					]
+				}).custom-select--nav(aria-label='Категории')
+			.col-md-12.col-xl-9.ajax-result
+				.preloader.filter-preloader-block.preloader--catalog.hidden
+				.catalog-product-list.no-critical
+					.row.ajax-nav-item-row
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 0,
+							})
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 1,
+							})
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 2,
+							})
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 3,
+							})
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 4,
+							})
+						.col-12.ajax-nav-item
+							+product-card({
+								favourites: true,
+								mod: 'product-card--favourites',
+								count: 5,
+							})
+						.pagination Показано 12 из 234
+						.catalog-btn-more.w100p(onclick='get_next_items_956697a443e2b0e1428dc291a9fc7375(this);return false;')
+							span.preloader
+							a(href='/catalog/koreya-yaponiya/podari-radost/?PAGEN_1=2')
+								.js-text
+									| Показать ещё
+									|
+									|
+									span.remain_item_count_956697a443e2b0e1428dc291a9fc7375 5 товаров
+
+
+script.
+	window.addEventListener( 'load', function( event ) {
+		function filter_init() {
+			slamFilterJsInit();
+			$('#ajaxfilter-filter').slamAjaxSmartFilter({
+				ajaxURL: '/catalog/stiralnye-mashiny/',
+				urlDelete: '/catalog/stiralnye-mashiny/',
+				align: 'LEFT',
+				modeftimeout: 0
+			});
+		}
+
+		var filter_init_timeout;
+
+
+		// Отлаживаем инит на 3с на вью со скрытым фильтром
+		if ($(window).width() < 1200) {
+			filter_init_timeout = setTimeout(function () {
+				filter_init()
+			}, 3000)
+		} else {
+			clearTimeout(filter_init_timeout)
+			filter_init()
+		}
+	});

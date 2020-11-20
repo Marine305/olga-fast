@@ -1,0 +1,43 @@
+@import '../../assets/css/common/components-import';
+.btn.btn--outline {
+  padding: 12px 10px;
+  color: $c-firm;
+  border: 1px solid $c-firm;
+  border-radius: 33px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  &[disabled], &.disabled {
+    color: #e0e0e0 !important;
+    border: solid 1px #e0e0e0 !important;
+    background: transparent !important;
+    &:active, &:hover, &.active {
+      color: #e0e0e0 !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+  @media (min-width: $lg) {
+    &:hover, &.active {
+      color: $c-firm;
+      border: 1px solid $c-firm;
+    }
+    &:active {
+      border: 1px solid $c-firm;
+    }
+  }
+}
+.btn.btn--error {
+  transition: color .3s, border .3s;
+  color: $c-error;
+  border: 1px solid $c-error;
+  @media (min-width: $lg) {
+    &:hover, &.active {
+      color: rgba(#c74a2c, .8);
+      border: 1px solid rgba(#c74a2c, .8);
+    }
+    &:active {
+      border: 1px solid rgba(#c74a2c, .8);
+    }
+  }
+}

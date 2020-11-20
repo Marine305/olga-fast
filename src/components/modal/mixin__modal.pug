@@ -1,0 +1,30 @@
+mixin modal(args = {})
+	//-
+		+modal({
+			id: 'modal-NAME',
+			mod: 'modal-NAME',
+			title: 'TITLE',
+			header: true,
+			dialog_mod: ''
+		})
+
+	+include-style('modal')
+	+include-script('modal')
+
+	.modal.fade(
+		id = args.id, 
+		class= args.mod tabindex='-1', 
+		role='dialog', 
+		aria-labelledby= args.mod, 
+		aria-hidden='true'
+		)
+		.modal-dialog.modal-dialog-centered(class= args.dialog_mod role='document')
+			.modal-content
+
+				if (args.header)
+					.modal-header
+						.modal-title= args.title
+				button.modal-close(type="button" data-dismiss="modal" aria-label="Close")
+					+icon('i-close')(style='width: 26px; height: 26px;')
+				.modal-body
+					block

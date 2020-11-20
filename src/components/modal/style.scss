@@ -1,0 +1,222 @@
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/modal';
+@import '../../assets/css/common/components-import';
+.modal-feedback-form {
+  width: 100%;
+  max-width: 515px;
+  margin: 0 auto;
+}
+.order-registration-content {
+  width: 100%;
+  max-width: 515px;
+  margin: 0 auto;
+}
+.modal {
+  .modal-dialog {
+    margin: 0 auto;
+  }
+  .modal-content {
+    border: none;
+    border-radius: 22px 0;
+    background-clip: unset;
+  }
+  .modal-footer > * {
+    margin: unset;
+  }
+  .modal-footer {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .modal-close {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    right: 26px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border: none;
+    .icon {
+      transition: fill .3s;
+      fill: $c-firm;
+    }
+  }
+  .modal-body {
+    padding: 30px 40px;
+  }
+  .modal-header {
+    padding: 30px 40px 0;
+    border-bottom: none;
+    border-radius: 0;
+  }
+  .modal-title {
+    width: 100%;
+    text-align: left;
+    color: #181717;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 1;
+  }
+  .tab-panel {
+    &__head-item {
+      padding: 0 0 10px 0;
+      cursor: pointer;
+      letter-spacing: 0;
+      font-size: 24px;
+      font-weight: bold;
+      &:not(:first-child) {
+        margin-left: 40px;
+      }
+    }
+    &__body {
+      margin: 30px 0 0 0;
+    }
+  }
+  .modal-login {
+    &__form {
+      .btn {
+        margin-right: 25px;
+        padding: 12px 25px;
+      }
+    }
+    &__social {
+      margin: 30px -40px -30px -40px;
+      padding: 30px 40px;
+      border-radius: 0 0 22px 0;
+      background: $c-main;
+    }
+    &__social-title {
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .success-container {
+    padding: 0 30px;
+    .btn {
+      margin: 10px;
+    }
+  }
+  .success-title {
+    display: flex;
+    align-items: center;
+    padding: 16px 30px;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    color: $white;
+    background: $c-main;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    .icon {
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+  .authoris-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-group {
+      width: 50%;
+    }
+    .btn {
+      width: 40%;
+      margin: 0 auto 30px;
+    }
+    .blocked-text {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-width: 180px;
+      font-size: 12px;
+    }
+  }
+  .order-box__descr-item:not(.type-2) {
+    margin: 0 30px 12px;
+  }
+  @media (max-width: 575 - 1px) {
+    .modal {
+      padding-right: 0 !important;
+    }
+    .modal-header {
+      padding: 30px 20px 0;
+    }
+    .modal-body {
+      padding: 25px 20px;
+    }
+    .order-box__descr-item:not(.type-2) {
+      margin: 0 0 12px;
+    }
+    .success-container {
+      padding: 0;
+      .btn {
+        width: 100%;
+        max-width: 375px;
+      }
+    }
+    .success-title {
+      padding: 14px 20px;
+      line-height: 1.55;
+    }
+  }
+  @media (min-width: $sm) {
+    background-color: transparent;
+  }
+  @media (min-width: $sm) and (max-width: $md - 1px) {
+  }
+  @media (min-width: $md) and (max-width: $lg - 1px) {
+  }
+  @media (min-width: $lg) and (max-width: $xl - 1px) {
+  }
+  @media (min-width: $md) {
+    .modal-close {
+      &:hover {
+        .icon {
+          fill: #c74a2c;
+        }
+      }
+    }
+  }
+}
+#modal-success-order {
+  .modal-header, .modal-body {
+    position: relative;
+    z-index: 5;
+  }
+  .modal-content {
+    z-index: 1;
+    &::before {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      opacity: .6;
+      background-image: url('../../images/vegetable-png.png');
+      background-size: contain;
+    }
+    @media (min-width: $sm) {
+      &::after {
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        bottom: 0;
+        width: 27px;
+        height: 118px;
+        content: '';
+        border-radius: 22px 0px;
+        background: $c-firm;
+      }
+    }
+  }
+}
+
+

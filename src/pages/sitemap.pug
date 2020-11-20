@@ -1,0 +1,25 @@
+extends ../layout/layout
+
+block vars
+	- var bodyClass = 'inner'
+	- var pageTitle = 'Карта сайта'
+	- var dir = './'
+	- var layout = ''
+
+block main
+
+	include ../components/inner-pages/sitemap
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+
+block vendorScripts
+	+vendorScripts-includer()
+
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts

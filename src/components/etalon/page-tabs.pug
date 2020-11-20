@@ -1,0 +1,12 @@
+h3 Табы
+- var tabId = getRandom()
++nav-tabs()
+	+nav-item({id: tabId,count: 1,active: true})
+		| Заголовок 1
+	+nav-item({id: tabId,count: 2})
+		| Заголовок 2
++tab-content()
+	+tab-pane({id: tabId, count: 1, active: true})
+		p Контент 1
+	+tab-pane({id: tabId, count: 2})
+		p Контент 2

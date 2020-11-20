@@ -1,0 +1,25 @@
+extends ../layout/layout-empty
+
+block vars
+	- var bodyClass = 'inner'
+	- var pageTitle = '500'
+	- var dir = './'
+	- var layout = ''
+
+block main
+	.no-critical.no-critical--preloader
+		include ../components/inner-pages/500
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+
+block vendorScripts
+	+vendorScripts-includer()
+
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts

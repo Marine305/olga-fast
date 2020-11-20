@@ -1,0 +1,414 @@
++include-style('catalog')
++include-script('catalog')
++include-style('sidebar')
+.catalog
+	.container
+		.row
+			.col-md-12.col-xl-3
+				+custom-select({
+					items: [
+						{
+							value: 'Парфюмерия',
+							counter: '123'
+						}, {
+							value: 'Косметика',
+							counter: '112'
+						}, {
+							value: 'Уход за кожей',
+							counter: '132'
+						}, {
+							value: 'Бытовая химия',
+							counter: '12'
+						},
+					]
+				}).custom-select--nav(aria-label='Категории')
+				#ajaxfilter-filter.sidebar-filter.no-critical
+					.sidebar-filter__block
+						.sidebar-filter__header
+							.link.btn--reset.sidebar-filter__header-reset(onclick="location.href='/catalog/duhovye-shkafy/';") Сбросить
+							.sidebar-filter__close.js-btn-toggle(data-target='.sidebar-filter__block')
+							.sidebar-filter__title Фильтры
+
+						form#filter.form(name='_form', action='/catalog/stiralnye-mashiny/', method='get', data-sef='yes')
+							.sidebar-filter__item.form-group.d-xl-none
+								.js-wrap-mob-tag
+									+tag({
+										name: 'Лидеры продаж',
+										close: true
+									})
+									+tag({
+										name: 'ALEXANDER MCQUEEN',
+										close: true
+									})
+
+							.sidebar-filter__item.form-group.lvl1
+								.sidebar-filter__head СПЕЦ.ПРЕДЛОЖЕНИЯ
+								.sidebar-filter__content.ajaxfilter-combo.ajaxfilter-filter-property-body.init-more(data-name='all_kategoriya')
+									.form-group(data-name='all_kategoriya')
+										.checkbox.lvl2
+											input#arFilter_2273_2914967296(type='checkbox', value='lidery_prodazh', name='all_kategoriya')
+											label(for='arFilter_2273_2914967296')
+												| Лидеры продаж
+												span.ajaxfilter-cnt.checkbox-counter 11
+									.form-group(data-name='all_kategoriya')
+										.checkbox.lvl2
+											input#arFilter_2273_2802065548(type='checkbox', value='stiralnye_mashiny_s_sushkoy', name='all_kategoriya')
+											label(for='arFilter_2273_2802065548')
+												| Чекбокс не выбран
+												span.ajaxfilter-cnt.checkbox-counter 31
+									.form-group(data-name='all_kategoriya')
+										.checkbox.lvl2
+											input#arFilter_2273_3186977367(type='checkbox', value='stiralnye_mashiny_s_frontalnoy_zagruzkoy', name='all_kategoriya')
+											label(for='arFilter_2273_3186977367')
+												| Новинки
+												span.ajaxfilter-cnt.checkbox-counter 119
+							.sidebar-filter__item.form-group.lvl1.closed
+								.sidebar-filter__head Объем
+								.sidebar-filter__content.ajaxfilter-combo.ajaxfilter-filter-property-body.init-more(data-name='all_cvet')
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_2733696122(type='checkbox', value='belyy', name='all_cvet')
+											label(for='arFilter_2280_2733696122')
+												| Объем 1
+												span.ajaxfilter-cnt.checkbox-counter 129
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_1035622396(type='checkbox', value='goluboy', name='all_cvet')
+											label(for='arFilter_2280_1035622396')
+												| Объем 2
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_4201049918(type='checkbox', value='grafit', name='all_cvet')
+											label(for='arFilter_2280_4201049918')
+												| Объем 3
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_3379501146(type='checkbox', value='kremovyy', name='all_cvet')
+											label(for='arFilter_2280_3379501146')
+												| Объем 4
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_2642008686(type='checkbox', value='nerzhaveyushchaya_stal', name='all_cvet')
+											label(for='arFilter_2280_2642008686')
+												| Объем 5
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_613431997(type='checkbox', value='rozovyy', name='all_cvet')
+											label(for='arFilter_2280_613431997')
+												| Объем 6
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_788596282(type='checkbox', value='serebristyy', name='all_cvet')
+											label(for='arFilter_2280_788596282')
+												| Объем 7
+												span.ajaxfilter-cnt.checkbox-counter 9
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_2125338020(type='checkbox', value='seryy', name='all_cvet')
+											label(for='arFilter_2280_2125338020')
+												| Объем 8
+												span.ajaxfilter-cnt.checkbox-counter 1
+							.sidebar-filter__item.form-group.lvl1
+								.sidebar-filter__head БРЕНДЫ
+								.sidebar-filter__content.ajaxfilter-combo.ajaxfilter-filter-property-body.init-more(data-name='all_proizvoditel')
+									.form-group(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3954135446(type='checkbox', value='aeg', name='ACQUA_DI_PARMA')
+											label(for='arFilter_2279_3954135446')
+												| ACQUA DI PARMA
+												span.ajaxfilter-cnt.checkbox-counter 11
+									.form-group(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_439608949(type='checkbox', value='atlant', name='ALEXANDER_MCQUEEN')
+											label(for='arFilter_2279_439608949')
+												| ALEXANDER MCQUEEN
+												span.ajaxfilter-cnt.checkbox-counter 14
+									.form-group(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3696893030(type='checkbox', value='bosch', name='all_proizvoditel')
+											label(for='arFilter_2279_3696893030')
+												| BOTTEGA VENETA
+												span.ajaxfilter-cnt.checkbox-counter 11
+									.form-group(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3349002670(type='checkbox', value='beko', name='all_proizvoditel')
+											label(for='arFilter_2279_3349002670')
+												| BRUNO BANANI
+												span.ajaxfilter-cnt.checkbox-counter 10
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1050964817(type='checkbox', value='electrolux', name='all_proizvoditel')
+											label(for='arFilter_2279_1050964817')
+												| COMME DES GARCONS
+												span.ajaxfilter-cnt.checkbox-counter 17
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3434875822(type='checkbox', value='haier', name='all_proizvoditel')
+											label(for='arFilter_2279_3434875822')
+												| ESSE STRIKES THE NOTES
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1372973346(type='checkbox', value='hansa', name='all_proizvoditel')
+											label(for='arFilter_2279_1372973346')
+												| Hansa
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3451084271(type='checkbox', value='hotpoint_ariston', name='all_proizvoditel')
+											label(for='arFilter_2279_3451084271')
+												| Hotpoint-Ariston
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_2880169088(type='checkbox', value='indesit', name='all_proizvoditel')
+											label(for='arFilter_2279_2880169088')
+												| Indesit
+												span.ajaxfilter-cnt.checkbox-counter 13
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_4121806533(type='checkbox', value='lg', name='all_proizvoditel')
+											label(for='arFilter_2279_4121806533')
+												| LG
+												span.ajaxfilter-cnt.checkbox-counter 26
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1796588734(type='checkbox', value='maunfeld', name='all_proizvoditel')
+											label(for='arFilter_2279_1796588734')
+												| MAUNFELD
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_2598595547(type='checkbox', value='miele', name='all_proizvoditel')
+											label(for='arFilter_2279_2598595547')
+												| Miele
+												span.ajaxfilter-cnt.checkbox-counter 12
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_356692767(type='checkbox', value='neff', name='all_proizvoditel')
+											label(for='arFilter_2279_356692767')
+												| NEFF
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_776164428(type='checkbox', value='samsung', name='all_proizvoditel')
+											label(for='arFilter_2279_776164428')
+												| Samsung
+												span.ajaxfilter-cnt.checkbox-counter 15
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1146800705(type='checkbox', value='siemens', name='all_proizvoditel')
+											label(for='arFilter_2279_1146800705')
+												| Siemens
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1940868154(type='checkbox', value='smeg', name='all_proizvoditel')
+											label(for='arFilter_2279_1940868154')
+												| Smeg
+												span.ajaxfilter-cnt.checkbox-counter 20
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_1558226473(type='checkbox', value='weissgauff', name='all_proizvoditel')
+											label(for='arFilter_2279_1558226473')
+												| Weissgauff
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_proizvoditel')
+										.checkbox.lvl2
+											input#arFilter_2279_3309898042(type='checkbox', value='zanussi', name='all_proizvoditel')
+											label(for='arFilter_2279_3309898042')
+												| Zanussi
+												span.ajaxfilter-cnt.checkbox-counter 1
+							.sidebar-filter__item.form-group.lvl1
+								.sidebar-filter__head Объем
+								.sidebar-filter__content.ajaxfilter-combo.ajaxfilter-filter-property-body.init-more(data-name='all_cvet')
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_233696122(type='checkbox', value='belyy', name='all_cvet')
+											label(for='arFilter_2280_233696122')
+												| до 100 мл
+												span.ajaxfilter-cnt.checkbox-counter 129
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_103622396(type='checkbox', value='goluboy', name='all_cvet')
+											label(for='arFilter_2280_103622396')
+												| 100 - 300 мл
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_420049918(type='checkbox', value='grafit', name='all_cvet')
+											label(for='arFilter_2280_420049918')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_337950116(type='checkbox', value='kremovyy', name='all_cvet')
+											label(for='arFilter_2280_337950116')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_2642008682(type='checkbox', value='nerzhaveyushchaya_stal', name='all_cvet')
+											label(for='arFilter_2280_2642008682')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 2
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_613431991(type='checkbox', value='rozovyy', name='all_cvet')
+											label(for='arFilter_2280_613431991')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 1
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_788596281(type='checkbox', value='serebristyy', name='all_cvet')
+											label(for='arFilter_2280_788596281')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 9
+									.form-group.form-group--hidden(data-name='all_cvet')
+										.checkbox.lvl2
+											input#arFilter_2280_2125338021(type='checkbox', value='seryy', name='all_cvet')
+											label(for='arFilter_2280_2125338021')
+												| 300 мл и больше
+												span.ajaxfilter-cnt.checkbox-counter 1
+							.sidebar-filter__item.form-group.lvl1
+								.sidebar-filter__head Цена
+								.sidebar-filter__content
+									.ajaxfilter-num.ajaxfilter-filter-property-body(data-name='price')
+										.ajaxfilter-range
+											input(name='price-range', data-from='429', data-to='7960', data-min='429', data-max='7960', data-grid='false', data-prefix='', data-postfix='<span class="ajaxfilter-range__postfix">р.</span>', data-force-edges='true', data-step='1')
+										.ajaxfilter-inputs(style='display: none;')
+											input#arFilter_P1_MIN.ajaxfilter-input.ajaxfilter-num-from.form-group__input(type='text', name='price_from', value='429', size='5', placeholder='429')
+											input#arFilter_P1_MAX.ajaxfilter-input.ajaxfilter-num-to.form-group__input(type='text', name='price_to', value='7960', size='5', placeholder='7960')
+											span.ajaxfilter-inputs__pref от
+											span.ajaxfilter-inputs__pref до
+							#modef.submit-filter
+								button.btn.btn--primary.btn-filter-submit.js-scroll-to-top.js-btn-toggle(data-target='.sidebar-filter__block', type='button')
+									span.full Показать 
+									span#modef_num.result 161 
+									span.num-title
+										| товар
+								a(href='/catalog/stiralnye-mashiny/')
+									span.link.btn--reset.filter-reset сбросить фильтр
+			.col-md-12.col-xl-9.ajax-result
+				.preloader.filter-preloader-block.preloader--catalog.hidden
+				.catalog-product-list.no-critical
+					.row
+						.col-12.col-md-12.col-lg-12
+							.catalog-product-list__header
+								.btn.btn--primary.btn-catalog-filter-toggle.js-btn-toggle(data-target='.sidebar-filter__block', data-overflow-click='true', data-overflow-fade='true')
+									| Фильтры
+								.catalog-tag-list.js-block-mob-tag
+									+tag({
+										name: 'Лидеры продаж',
+										close: true
+									})
+									+tag({
+										name: 'ALEXANDER MCQUEEN',
+										close: true
+									})
+								.catalog-product-list__control-list
+									.form-group.m0
+										+custom-select({
+											items: [
+												{
+													value: 'Сначала дешевые'
+												}, {
+													value: 'Сначала дорогие'
+												}, {
+													value: 'Сначала новые'
+												}, {
+													value: 'По бренду'
+												}
+											]
+										}).js-sort-catalog(aria-label='Сортировка')
+									a.sort-item-PRICE_ASC.link.right.catalog-header__sort.catalog-ajax-reload(class='asc,nulls', href='?sort=PRICE&order=asc', style='display: none;')
+										| Сначала дешевые
+									a.sort-item-PRICE_DESC.link.right.catalog-header__sort.catalog-ajax-reload.desc(href='?sort=PRICE&order=desc', style='display: none;')
+										| Сначала дорогие
+									a.sort-item-ID.link.right.catalog-header__sort.catalog-ajax-reload.active.asc(href='?sort=ID&order=desc', style='display: none;')
+										| Сначала новые
+									.catalog-view
+										.catalog-view-item.active
+											a.catalog-ajax-reload(href='catalog-list.html')
+												+icon('v-list').catalog-view-item__icon(style='width: 30px;height:30px')
+										.catalog-view-item
+											a.catalog-ajax-reload(href='catalog-grid.html')
+												+icon('v-card').catalog-view-item__icon(style='width: 30px;height:30px')
+					.row.ajax-nav-item-row
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 0,
+							})
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 1,
+							})
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 2,
+							})
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 3,
+							})
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 4,
+							})
+						.col-6.col-md-4.col-lg-4.col-xl-12.ajax-nav-item
+							+product-card({
+								list: true,
+								mod: 'product-card--list',
+								count: 5,
+							})
+						.pagination Показано 12 из 234
+						.catalog-btn-more.w100p(onclick='get_next_items_956697a443e2b0e1428dc291a9fc7375(this);return false;')
+							span.preloader
+							a(href='/catalog/koreya-yaponiya/podari-radost/?PAGEN_1=2')
+								.js-text
+									| Показать ещё
+									|
+									|
+									span.remain_item_count_956697a443e2b0e1428dc291a9fc7375 5 товаров
+
+
+script.
+	window.addEventListener( 'load', function( event ) {
+		function filter_init() {
+			slamFilterJsInit();
+			$('#ajaxfilter-filter').slamAjaxSmartFilter({
+				ajaxURL: '/catalog/stiralnye-mashiny/',
+				urlDelete: '/catalog/stiralnye-mashiny/',
+				align: 'LEFT',
+				modeftimeout: 0
+			});
+		}
+
+		var filter_init_timeout;
+
+
+		// Отлаживаем инит на 3с на вью со скрытым фильтром
+		if ($(window).width() < 1200) {
+			filter_init_timeout = setTimeout(function () {
+				filter_init()
+			}, 3000)
+		} else {
+			clearTimeout(filter_init_timeout)
+			filter_init()
+		}
+	});

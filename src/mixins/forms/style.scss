@@ -1,0 +1,119 @@
+@import '../../assets/css/common/components-import';
+.wide-input {
+  width: 32%;
+}
+.small-input {
+  width: 18%;
+}
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  &.has-error {
+    .form-control {
+      border-bottom: 1px solid $c-error;
+      &:focus {
+        border-bottom: 1px solid $c-error;
+      }
+    }
+    .help-block {
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      color: $c-error;
+      font-size: 12px;
+    }
+  }
+  .checkbox label a {
+    margin: 0 5px;
+    text-decoration: underline;
+    color: $c-text;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .checkbox label:before {
+    top: 1px;
+  }
+}
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .form-group {
+    width: auto;
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+.form-control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  transition: box-shadow .3s, border .3s;
+  color: $c-text;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 0;
+  outline: none;
+  background: $c-trp;
+  font-size: 18px;
+  font-weight: normal;
+  &:focus {
+    border-bottom: 1px solid $c-firm;
+  }
+  &::placeholder, &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+    letter-spacing: .01em;
+    color: $c-link;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+.form-control-label {
+  display: block;
+  margin: 0 0 7px;
+  padding: 0 0 0 9px;
+  user-select: none;
+  letter-spacing: 0;
+  color: #4d4d4f;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+}
+@media (max-width: 575px) {
+  .form-control-label {
+    margin: 0;
+  }
+  .form-control {
+    padding: 5px 10px;
+  }
+}
+@media (min-width: $lg) {
+  .form-group {
+    &:hover {
+      .form-control {
+        &:not(:focus) {
+          border-bottom: 1px solid $c-firm;
+        }
+      }
+    }
+  }
+  .form-group.has-error {
+    &:hover {
+      .form-control {
+        &:not(:focus) {
+          border-bottom: 1px solid $c-error;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .wide-input {
+    width: 100%;
+  }
+  .small-input {
+    width: 50%;
+  }
+}
+

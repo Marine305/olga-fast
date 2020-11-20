@@ -1,0 +1,23 @@
+@import '../../assets/css/common/components-import';
+.tab-panel {
+  &__head {
+    display: flex;
+  }
+  &__head-item {
+    padding: 10px 0;
+    cursor: pointer;
+    letter-spacing: .01em;
+    border-bottom: 2px solid $c-trp;
+    font-size: 18px;
+    font-weight: bold;
+    &.active {
+      border-bottom: 2px solid $c-firm;
+    }
+    &:not(:first-child) {
+      margin-left: 60px;
+    }
+  }
+  &__body {
+    margin: 20px 0;
+  }
+}

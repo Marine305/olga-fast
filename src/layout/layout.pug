@@ -1,0 +1,89 @@
+include ../utility/bemto-setting
+include ../utility/_globalVars
+include ../utility/_mixins
+include ../utility/_functions
+
+block vars
+	- var pageTitle
+	- var pageBodyClass
+	- var pageHeaderClass
+	- var footerClass
+	- var dir
+	- var layout
+	- var isSidebar
+
+- var componentsList = [] //список имен всех компонентов
+- var componentsCriticalList = [] // список имен компонентов, стили которых нужно подключить инлайного в head
+- var componentsScriptsList = [] // список имен компонентов, скрипты которых нужно подключить на страницу. они не должны подключаться в main.js
+- var vendorScriptsList = [] // список имен вендоров, скрипты которых нужно подключить на страницу. они не должны подключаться в main.js
+
+doctype html
+html(lang='ru-RU')
+
+	head
+		meta(name="msapplication-TileColor" content="#4F681E")
+		meta(name="theme-color" content="#4F681E")
+		meta(charset='UTF-8')
+		meta(name='format-detection', content='telephone=no')
+		meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1.0')
+		meta(name='description', content='Первый и единственный в Беларуси био маркет где можно приобрести био органическую продукцию известных во всем мире производителей.')
+		title= pageTitle
+
+		//- Подключение общих критический стилей
+		link(rel='stylesheet', href= dir + '../assets/css/critical/critical.css' inline)
+
+		//- Подключение критический стилей отдельных страниц
+		block componentsCriticalStyles
+
+		script.
+			!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+		// Мета инфо
+		//- include ../utility/_favicon
+
+	body.no-js(class = bodyClass)
+		script.
+			document.querySelector('body').classList.remove('no-js');
+
+		.wrapper
+			header(class = headerClass)
+				include ../components/header/header
+
+			main.main
+				block premain
+				block main
+
+			.no-critical
+				footer
+					include ../components/footer/footer
+
+		// Модальные окна
+		block popups
+
+		// Фон мобильного меню
+		.mob-overlay
+
+		// Виджет для перехода по всем страницам проекта
+		include ../components/pages-viget/pages-viget
+
+		//- async defer
+		// Либы, используемые на всех страницах
+		script(src="./js/jquery/jquery.min.js" defer)
+		script(src="./js/vendor/svg4everybody.js" defer)
+		script(src="./js/vendor/noframework.waypoints.min.js" defer)
+		// Скрипты компонентов только для этой страницы
+		block vendorScripts
+
+		// Вялая загрузка картинок
+		script(src="./js/vendor/lazyload.min.js" defer)
+
+		// Либы, используемые только на этой странице
+		block scripts
+
+		// Основные скрипты для всех страниц
+		script(src="./js/app.min.js" defer)
+		+validation()
+
+		// Скрипты компонентов только для этой страницы
+		block componentsScripts
+
+		block componentsStyles

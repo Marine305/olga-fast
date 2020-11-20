@@ -1,0 +1,16 @@
++include-style('contacts-page')
+.container
+	.row
+		.col-12.col-xl-10.offset-xl-1.col-lg-10.offset-lg-1.col-md-12
+			+tab-list
+				+tab-item({
+					class: 'active',
+					linkname: 'Минск'
+				})
+				+tab-item({
+					linkname: 'Витебск'
+				})
+				+tab-item({
+					linkname: 'Полоцк'
+				})
+	+slider-contacts

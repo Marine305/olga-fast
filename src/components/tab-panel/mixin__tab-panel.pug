@@ -1,0 +1,16 @@
+mixin tab-panel(args ={})
+	+include-style('tab-panel')
+	//- +include-script('tab-panel')
+	.tab-panel.js-tab-wrap
+		block
+
+
+
+
+mixin tab-item-head(args ={})
+	.tab-panel__head-item.js-tab-trigger(class=args.class)
+		span=args.head
+
+mixin tab-item-body(args ={})
+	.tab-panel__body-item.js-tab-body-item(class=args.class)&attributes(attributes)
+		block

@@ -1,0 +1,18 @@
+@import '../../assets/css/common/components-import';
+.btn.btn--primary {
+  min-width: 100px;
+  padding: 12px 14px;
+  color: $white;
+  border-radius: 33px;
+  background: $c-firm;
+  line-height: 1.1;
+  @media (min-width: $lg) {
+    &:hover {
+      background: $c-firm;
+    }
+    &:active {
+      background: $c-firm;
+    }
+  }
+}
+

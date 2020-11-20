@@ -1,0 +1,35 @@
++include-style('index-bonus-block')
+.index-bonus-block
+	+icon('bg-leaf-wide')(style='width:1012px;height:310px;stroke:#8DC63F;fill:none').left-icon
+	+icon('bg-leaf-wide')(style='width:1012px;height:521px;stroke:#8DC63F;fill:none').right-icon
+	.bonus-block
+		.bonus-block__item
+			+lazy-img({
+				img: './images/i-products.svg',
+				placeholder: pixel,
+				img_mod: 'bonus-block__img',
+				wrap_mod: 'bonus-block__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			span Продукция от мировых лидеров рынка здорового питания
+		.bonus-block__item
+			+lazy-img({
+				img: './images/i-sertif.svg',
+				placeholder: pixel,
+				img_mod: 'bonus-block__img',
+				wrap_mod: 'bonus-block__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			span Все продукты сертифицированы
+		.bonus-block__item
+			+lazy-img({
+				img: './images/i-bonus.svg',
+				placeholder: pixel,
+				img_mod: 'bonus-block__img',
+				wrap_mod: 'bonus-block__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			span Бонусная программа для постоянных клиентов

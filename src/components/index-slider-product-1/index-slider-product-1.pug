@@ -1,0 +1,28 @@
+
++include-style('index-slider-product-1')
+.index-slider-product-1
+	+lazy-img({
+		img: 'images/bg-leaf-small.svg',
+		placeholder: pixel,
+		img_mod: 'index-slider-product-1__right-bg',
+		wrap_mod: 'index-slider-product-1__right-bg-wrap',
+		link: false,
+		aria_label: false,
+	})
+	+slider-product({
+		tab: true,
+		ajax: true
+	})
+		+tab-item({
+			class: 'active',
+			linkname: 'Скидки',
+		})
+		+tab-item({
+			linkname: 'Хиты',
+		})
+		+tab-item({
+			linkname: 'Новинки'
+		})
+		+tab-item({
+			linkname: 'Рекомендуем'
+		})

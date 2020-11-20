@@ -1,0 +1,49 @@
++include-script('slider-first-screen')
++include-style('slider-first-screen')
+.slider-first-screen
+	+swiper-wide({
+		wrapper_mod: '',
+		container_mod: '',
+		pagination_mod: '',
+		arrow_prev_mod: 'custom-swiper-btn__prev',
+		arrow_next_mod: 'custom-swiper-btn__next',
+		pagination: true,
+		navigation: true,
+	}).fs-slider.js-fs-slider
+
+		.swiper-slide.fs-slider__slide
+			a(href='#' class='fs-slider__picture' aria-label='#')
+				picture.lazy-img-wrap.fs-slider__img-wrap
+					source(data-srcset= 'images/fs-slide-0-xl.jpg', srcset= 'images/fs-slide-0-xl.jpg', media='(min-width: 415px)')
+					source(data-srcset= 'images/fs-slide-0-sm.jpg', srcset= 'images/fs-slide-0-sm.jpg', media='(min-width: 250px)')
+					img.swiper-lazy(class= 'fs-slider__img', data-src= 'images/fs-slide-0-xl.jpg', data-srcset= 'images/fs-slide-0-xl.jpg', alt='img')
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 1,
+			})
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 2,
+			})
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 3,
+			})
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 4,
+			})
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 5,
+			})
+		.swiper-slide.fs-slider__slide
+			+fs-slider__item({
+				count: 6,
+			})
+		//- .swiper-slide.fs-slider__slide
+		//- 	a(href='#' class='fs-slider__picture' aria-label='#')
+		//- 		picture.lazy-img-wrap.fs-slider__img-wrap
+		//- 			source(data-srcset= 'images/fs-slide-6-xl.jpg', srcset= 'images/fs-slide-6-xl.jpg', media='(min-width: 415px)')
+		//- 			source(data-srcset= 'images/fs-slide-6-sm.jpg', srcset= 'images/fs-slide-6-sm.jpg', media='(min-width: 250px)')
+		//- 			img.swiper-lazy(class= 'fs-slider__img', data-src= 'images/fs-slide-6-xl.jpg', data-srcset= 'images/fs-slide-6-xl.jpg', alt='img')

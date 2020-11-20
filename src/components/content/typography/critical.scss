@@ -1,0 +1,64 @@
+@import 'src/assets/css/common/components-import';
+
+
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6 {
+	display: flex;
+}
+
+.content .h1, .content h1,
+.h1, h1 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.4;
+	letter-spacing: 0.5px;
+	margin: 0 0 20px;
+	&.small {
+		font-size: 32px;
+	}
+	@media (max-width: 575px) {
+		font-size: 30px;
+		line-height: 1.2;
+		margin: 0 0 5px;
+	}
+}
+
+.content .h2, .content h2,
+.h2, h2 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1.4;
+	margin: 0 0 20px;
+}
+
+.content .h3, .content h3,
+.h3, h3 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.4;
+	margin: 0 0 20px;
+}
+
+.content .h4, .content h4,
+.h4, h4 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.2;
+	/* identical to box height, or 122% */
+	letter-spacing: 0.01em;
+	margin: 0 0 20px;
+}
+
+.content .h5, .content h5,
+.h5, h5 {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 1.2;
+	margin: 0 0 20px;
+}
+
+

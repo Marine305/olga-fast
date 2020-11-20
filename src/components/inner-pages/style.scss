@@ -1,0 +1,112 @@
+@import '../../assets/css/common/components-import';
+.page-error {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0;
+  @media (min-width: 1024px) {
+    &::after {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      opacity: .4 ;
+      background: url('/local/templates/html/images/bg-leaf-small.svg') no-repeat;
+      background-position: 100% 50px;
+    }
+    &::before {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 900px;
+      height: 100%;
+      content: '';
+      opacity: .4 ;
+      background: url('/local/templates/html/images/bg-leaf-wide.svg') no-repeat;
+      background-position: 0 130%;
+      background-size: contain;
+    }
+  }
+}
+.page-error-num {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 40px;
+  text-align: center;
+  span {
+    text-align: center;
+    letter-spacing: .5px;
+    background-color: rgba(40, 40, 40, 1);
+    background-image: url('/local/templates/html/images/vegetable-png.png');
+    -webkit-background-clip: text;
+    font-size: 220px;
+    font-weight: bold;
+    line-height: 1;
+
+    -webkit-text-fill-color: rgba(40, 40, 40, .8);
+  }
+}
+#clipping-text {
+  font: bold italic 15em/1 Georgia;
+}
+.page-error-btn {
+  width: 100%;
+  &:not(:last-child) {
+    margin: 0 10px 0 0;
+  }
+}
+.page-error-title {
+  max-width: 515px;
+  margin: 0 auto 16px;
+  text-align: center;
+  font-size: 30px;
+}
+.page-error-desc {
+  max-width: 515px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.page-error-action {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+  .btn {
+    padding: 12px 20px;
+  }
+}
+.sitemap {
+  padding: 100px 0;
+  .nav-link, .nav-lvl2-link, .nav-lvl3-link {
+    color: #282828;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 24px;
+  }
+  .nav-lvl2-list, .nav-lvl3-list {
+    padding: 0 0 0 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .page-error, .sitemap {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 575px) {
+  .page-error-num {
+    span {
+      font-size: 150px;
+    }
+  }
+}
+

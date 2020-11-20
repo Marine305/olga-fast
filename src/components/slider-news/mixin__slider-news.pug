@@ -1,0 +1,52 @@
+mixin slider-news(args= {})
+	+include-style('slider-news')
+	+include-script('slider-news')
+	.slider-news
+		.custom-container.custom-container--lg
+			h2.slider-news__title=args.title
+			+swiper({
+				wrapper_mod: '',
+				container_mod: '',
+				pagination_mod: '',
+				arrow_prev_mod: 'custom-swiper-btn__prev',
+				arrow_next_mod: 'custom-swiper-btn__next',
+				pagination: true,
+				navigation: true,
+			}).swiper-news(class=args.class_modificator)
+				//- Слайды
+				.swiper-slide
+					+news-card({
+						src: './images/blog-01.jpg',
+						date: '12 июня 2020',
+						title: 'Растительное молоко или напиток?'
+					}) 
+				.swiper-slide
+					+news-card({
+						src: './images/blog-02.jpg',
+						date: '12 июня 2020',
+						title: 'Растительное молоко или напиток?'
+					}) 
+				.swiper-slide
+					+news-card({
+						src: './images/blog-03.jpg',
+						date: '12 июня 2020',
+						title: 'Растительное молоко или напиток?'
+					}) 
+				.swiper-slide
+					+news-card({
+						src: './images/blog-04.jpg',
+						date: '12 июня 2020', 
+						title: 'Растительное молоко или напиток?'
+					}) 
+				.swiper-slide
+					+news-card({
+						src: './images/blog-05.jpg',
+						date: '12 июня 2020',
+						title: 'Растительное молоко или напиток?'
+					}) 
+				.swiper-slide
+					+news-card({
+						src: './images/blog-03.jpg',
+						date: '12 июня 2020',
+						title: 'Растительное молоко или напиток?'
+					}) 

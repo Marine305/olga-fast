@@ -1,0 +1,34 @@
+@import '../../assets/css/common/components-import';
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background .3s, color .3s, border .3s;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 0;
+  color: $white;
+  font-size: 15px;
+  line-height: 1;
+  svg {
+    transition: fill .3s;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  @media (max-width: 575px) {
+    font-size: 14px;
+  }
+}
+@import '--primary';
+@import '--outline';
+@import '--loading';
+@import '--link';
+@import '--small';
+@import '--large';
+@import '--disabled';
+

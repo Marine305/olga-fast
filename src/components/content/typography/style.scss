@@ -1,0 +1,72 @@
+@import 'src/assets/css/common/components-import';
+
+.content {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 1.3;
+	color: $c-text;
+	margin-bottom: 60px;
+	a:not([class]) {
+		color: $c-firm;
+		text-decoration: none;
+		padding: 2px;
+		border-bottom: 1px dashed $c-firm;
+		transition: color .3s;
+		&:hover {
+			color: $c-firm;
+		}
+	}
+
+	hr {
+		position: relative;
+		height: 1px;
+		border: 0;
+		margin: 20px 0;
+
+		&:after, &:before {
+			content: '';
+			display: table;
+			clear: both;
+		}
+	}
+	.h3,
+	h3 {
+		margin: 40px 0 20px;
+	}
+	p {
+		font-size: 15px;
+		line-height: 1.3;
+		color: $c-text;
+		margin-bottom: 20px;
+	}
+
+	mark {
+		background: $c-firm;
+		color: $c-text;
+		font-weight: normal;
+		padding: 0 5px;
+	}
+	s {
+		text-decoration: line-through;
+	}
+
+	blockquote {
+		display: block;
+		margin-bottom: 25px;
+		padding: 28px 35px;
+		font-size: 15px;
+		color: $c-text;
+		line-height: 1.7;
+		font-style: italic;
+		letter-spacing: 0.03em;
+		border-top: 1px solid $c-main;
+		border-bottom: 1px solid $c-main;
+	}
+	@media (max-width: 1024px) {
+		margin-bottom: 40px;
+	}
+	@media (max-width: 575px) {
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,247 @@
+extends ../layout/layout
+
+block vars
+	- var pageTitle = 'Главная'
+	- var bodyClass = ''
+	- var headerClass = ''
+	- var footerClass = ''
+	- var dir = './'
+	- var layout = ''
+	- var isSidebar = false
+
+block main
+	//- include ../components/slider-first-screen/slider-first-screen
+	//- .first-screen-wrap
+	//- 	img(src="https://picsum.photos/1920/1000", alt="")
+	//- 	.container
+	//- 		.left-column-wrap
+	//- 			.left-column
+	//- 				.swiper-container.first-screen-slider
+	//- 					.swiper-wrapper
+	//- 						.swiper-slide
+	//- 							.first-screen-slider__slide
+	//- 								h2.name Я вышла в небо
+	//- 								h6.text
+	//- 									| Золотыми потоками смоет <br>
+	//- 									| Всё, в чём мы изменили себе...<br>
+	//- 									| Наши души Господь успокоит!<br>
+	//- 									| Благодарны лишь будем судьбе!<br>
+	//- 								a(href='/inner-page.html').link Читать далее ...
+	//- 						.swiper-slide
+	//- 							.first-screen-slider__slide
+	//- 								h2.name Lorem Ipsum
+	//- 								h6.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	//- 								a(href='#').link Подробнее ...
+	//- 						.swiper-slide
+	//- 							.first-screen-slider__slide
+	//- 								h2.name Lorem Ipsum
+	//- 								h6.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	//- 								a(href='#').link Подробнее ...
+	//- 					.inner-slider-pagination
+	.no-critical.no-critical--preloader
+
+		.block-screen-wrap.white-block
+			.container
+				.block-screen
+					.block-screen__head От автора
+					.block-screen__body
+						.inner-col
+							//- .img-wrap
+							//- 	img(src="https://picsum.photos/500/900", alt="")
+						.inner-col
+							.name Сердечно БЛАГОДАРЮ Вас, <br>что посетили мой сайт!
+							.descr 
+								p Моя душа искренне рада встрече с Вами!
+								p Ольга Гера - творческий псевдоним. Настоящая фамилия автора - Герасимович Ольга Вячеславовна.
+								p Любовь к поэзии, авторской песне - это то, что возвышает наши души, питает  их прекрасными впечатлениями, приподнимает над обыденностью, дарит светлые минуты  окрылённости, восхищения, прикосновения к Истине, Мудрости, Вечности... 
+								p Многие мои стихи - песни, которые иногда приходят ко мне сразу вместе с мелодией...
+								p Это стихи-молитвы, -откровенья, - раздумья, -любованья и, конечно же, стихи о любви.
+								p Хочется предупредить, что не все стихи продиктованы моим личным опытом - и чувства моего литературного героя иногда навеяны случайными событиями, встречами и являются отражением переживаний других людей.
+
+								p С интересом жду Ваших откликов, друзья!
+							.descr 
+								p Моя душа искренне рада встрече с Вами!
+								p Ольга Гера - творческий псевдоним. Настоящая фамилия автора - Герасимович Ольга Вячеславовна.
+								p Любовь к поэзии, авторской песне - это то, что возвышает наши души, питает  их прекрасными впечатлениями, приподнимает над обыденностью, дарит светлые минуты  окрылённости, восхищения, прикосновения к Истине, Мудрости, Вечности... 
+								p Многие мои стихи - песни, которые иногда приходят ко мне сразу вместе с мелодией...
+								p Это стихи-молитвы, -откровенья, - раздумья, -любованья и, конечно же, стихи о любви.
+								p Хочется предупредить, что не все стихи продиктованы моим личным опытом - и чувства моего литературного героя иногда навеяны случайными событиями, встречами и являются отражением переживаний других людей.
+
+								p С интересом жду Ваших откликов, друзья!
+							.descr 
+								p Моя душа искренне рада встрече с Вами!
+								p Ольга Гера - творческий псевдоним. Настоящая фамилия автора - Герасимович Ольга Вячеславовна.
+								p Любовь к поэзии, авторской песне - это то, что возвышает наши души, питает  их прекрасными впечатлениями, приподнимает над обыденностью, дарит светлые минуты  окрылённости, восхищения, прикосновения к Истине, Мудрости, Вечности... 
+								p Многие мои стихи - песни, которые иногда приходят ко мне сразу вместе с мелодией...
+								p Это стихи-молитвы, -откровенья, - раздумья, -любованья и, конечно же, стихи о любви.
+								p Хочется предупредить, что не все стихи продиктованы моим личным опытом - и чувства моего литературного героя иногда навеяны случайными событиями, встречами и являются отражением переживаний других людей.
+
+								p С интересом жду Ваших откликов, друзья!
+							.descr 
+								p Моя душа искренне рада встрече с Вами!
+								p Ольга Гера - творческий псевдоним. Настоящая фамилия автора - Герасимович Ольга Вячеславовна.
+								p Любовь к поэзии, авторской песне - это то, что возвышает наши души, питает  их прекрасными впечатлениями, приподнимает над обыденностью, дарит светлые минуты  окрылённости, восхищения, прикосновения к Истине, Мудрости, Вечности... 
+								p Многие мои стихи - песни, которые иногда приходят ко мне сразу вместе с мелодией...
+								p Это стихи-молитвы, -откровенья, - раздумья, -любованья и, конечно же, стихи о любви.
+								p Хочется предупредить, что не все стихи продиктованы моим личным опытом - и чувства моего литературного героя иногда навеяны случайными событиями, встречами и являются отражением переживаний других людей.
+
+								p С интересом жду Ваших откликов, друзья!
+							.descr 
+								p Моя душа искренне рада встрече с Вами!
+								p Ольга Гера - творческий псевдоним. Настоящая фамилия автора - Герасимович Ольга Вячеславовна.
+								p Любовь к поэзии, авторской песне - это то, что возвышает наши души, питает  их прекрасными впечатлениями, приподнимает над обыденностью, дарит светлые минуты  окрылённости, восхищения, прикосновения к Истине, Мудрости, Вечности... 
+								p Многие мои стихи - песни, которые иногда приходят ко мне сразу вместе с мелодией...
+								p Это стихи-молитвы, -откровенья, - раздумья, -любованья и, конечно же, стихи о любви.
+								p Хочется предупредить, что не все стихи продиктованы моим личным опытом - и чувства моего литературного героя иногда навеяны случайными событиями, встречами и являются отражением переживаний других людей.
+
+								p С интересом жду Ваших откликов, друзья!
+
+		//- .block-screen-wrap
+		//- 	.container
+		//- 		.left-column-wrap
+		//- 			.left-column
+		//- 				h2.name O творчестве
+		//- 		.block-screen
+		//- 			.block-screen__body
+		//- 				.inner-row
+		//- 					.name "Я не пишу стихи, они приходят сами"
+		//- 					.descr 
+		//- 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+		//- 						p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		//- .block-screen-wrap.white-block
+		//- 	.container
+		//- 		.block-screen.swiper-container.photo__slider
+		//- 			.swiper-wrapper
+		//- 				.swiper-slide
+		//- 					.img-wrap
+		//- 						img(src="https://picsum.photos/510/300", alt="")
+		//- 					a(href='#').link краское описание фото
+		//- 				.swiper-slide
+		//- 					.img-wrap
+		//- 						img(src="https://picsum.photos/520/350", alt="")
+		//- 					a(href='#').link краское описание фото
+		//- 				.swiper-slide
+		//- 					.img-wrap
+		//- 						img(src="https://picsum.photos/530/300", alt="")
+		//- 					a(href='#').link краское описание фото
+		//- 				.swiper-slide
+		//- 					.img-wrap
+		//- 						img(src="https://picsum.photos/540/300", alt="")
+		//- 					a(href='#').link краское описание фото
+		//- 			.inner-slider-pagination
+		//- .block-screen-wrap.white-block
+		//- 	//- .container
+		//- 	.block-screen
+		//- 		.block-screen__head Что нового?
+		//- 		.swiper-container.news__slider
+		//- 			.swiper-wrapper
+		//- 				//- .swiper-slide
+		//- 				//- 	a(href='#')
+		//- 				//- 		.img-wrap
+		//- 				//- 			img(src="https://picsum.photos/700/1000", alt="")
+		//- 				//- 		h6.text Potenti nullam ac tortor vitae purus. Orci eu lobortis elementum nibh tellus molestie nunc. Cursus sit amet dictum sit amet justo. Convallis convallis tellus id interdum velit laoreet.
+		//- 				//- .swiper-slide
+		//- 				//- 	a(href='#')
+		//- 				//- 		.img-wrap
+		//- 				//- 			img(src="https://picsum.photos/1000/1000", alt="")
+		//- 				//- 		h6.text Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Consequat id porta nibh venenatis cras sed felis. Scelerisque felis imperdiet proin fermentum. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Pharetra et ultrices neque ornare. Tristique nulla aliquet enim tortor at auctor urna nunc.
+		//- 				//- .swiper-slide
+		//- 				//- 	a(href='#')
+		//- 				//- 		.img-wrap
+		//- 				//- 			img(src="https://picsum.photos/710/1000", alt="")
+		//- 				//- 		h6.text Pulvinar sapien et ligula ullamcorper. Eget velit aliquet sagittis id consectetur purus. Urna id volutpat lacus laoreet non curabitur gravida arcu. Neque sodales ut etiam sit amet nisl.
+		//- 				//- .swiper-slide
+		//- 				//- 	a(href='#')
+		//- 				//- 		.img-wrap
+		//- 				//- 			img(src="https://picsum.photos/1100/1000", alt="")
+		//- 				//- 		h6.text
+		//- 				//- 			| Поговорите со мною, звёзды!.. <br>
+		//- 				//- 			| И подарите душе встречу,<br>
+		//- 				//- 			| И подарите душе отдых<br>
+		//- 				//- 			| В этот дивный сияющий вечер.<br>
+		//- 				//- 			| Расскажите же мне о Доме...
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 1
+		//- 						.card__body
+		//- 							h6.text Potenti nullam ac tortor vitae purus. Orci eu lobortis elementum nibh tellus molestie nunc. Cursus sit amet dictum sit amet justo. Convallis convallis tellus id interdum velit laoreet. 
+		//- 							a(href='/inner-page.html').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/700/1000", alt="")
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 2
+		//- 						.card__body
+		//- 							h6.text Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Consequat id porta nibh venenatis cras sed felis. Scelerisque felis imperdiet proin fermentum. Viverra ...
+		//- 							a(href='#').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/1000/1000", alt="")
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 3
+		//- 						.card__body
+		//- 							h6.text Pulvinar sapien et ligula ullamcorper. Eget velit aliquet sagittis id consectetur purus. Urna id volutpat lacus laoreet non curabitur gravida arcu. Neque sodales ut etiam sit amet nisl.
+		//- 							a(href='/inner-page.html').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/710/1000", alt="")
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 4
+		//- 						.card__body
+		//- 							h6.text Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Ipsum suspendisse ultrices gravida dictum fusce ut placerat. Vestibulum mattis ullamcorper velit sed. In nibh mauris cursus mattis molestie a iaculis.
+		//- 							a(href='#').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/1100/1000", alt="")
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 5
+		//- 						.card__body
+		//- 							h6.text
+		//- 								| Поговорите со мною, звёзды!.. <br>
+		//- 								| И подарите душе встречу,<br>
+		//- 								| И подарите душе отдых<br>
+		//- 								| В этот дивный сияющий вечер.<br>
+		//- 								| Расскажите же мне о Доме...
+		//- 							a(href='/inner-page.html').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/780/1000", alt="")
+		//- 				.swiper-slide
+		//- 					.card
+		//- 						.card__head
+		//- 							h4 Статья 6
+		//- 						.card__body
+		//- 							h6.text Egestas purus viverra accumsan in nisl. Tortor id aliquet lectus proin nibh. Varius quam quisque id diam vel quam.
+		//- 							a(href='#').link Читать далее ...
+		//- 						.card-pic
+		//- 							.img-wrap
+		//- 								img(src="https://picsum.photos/800/1000", alt="")
+		//- 			.inner-slider-pagination
+
+
+block popups
+	include ../components/modal/modal-login/modal-login
+	include ../components/modal/one-click-buy/one-click-buy
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+
+block vendorScripts
+	+vendorScripts-includer()
+
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts

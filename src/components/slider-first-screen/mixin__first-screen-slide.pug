@@ -1,0 +1,57 @@
+mixin fs-slider__item(args= {})
+	//- .fs-slider__item-body
+		//- .h1.fs-slider__item-title=args.title
+		//- .fs-slider__sub-title=args.sub_title
+	
+	+lazy-picture-slider({
+		source: [
+			{
+				img: 'images/fs-slide-'+ args.count +'-xl.jpg',
+				placeholder: args.first ? 'images/fs-slide-'+ args.count +'-xl.jpg' : pixel,
+				media: 415
+			}, {
+				img: 'images/fs-slide-'+ args.count +'-sm.jpg 1x',
+				placeholder: args.first ? 'images/fs-slide-'+ args.count +'-sm.jpg' : pixel,
+				media: 250
+			}
+		],
+		link: true,
+		link_class: 'fs-slider__picture',
+		img: 'images/fs-slide-'+ args.count +'-xl.jpg',
+		placeholder: 'images/fs-slide-'+ args.count +'-xl.jpg',
+		img_mod: 'fs-slider__img',
+		wrap_mod: 'fs-slider__img-wrap'
+	})
+
+
+
+//- a(class= args.link_class href=args.href || '#' aria-label)
+//- 	picture.lazy-img-wrap(class= args.wrap_mod)
+//- 		each source in args.source
+//- 			-
+//- 				source.img = !args.http && source.img === pixel ? pixel : SITE_TEMPLATE_PATH + source.img
+//- 				source.placeholder = !args.http && source.placeholder === pixel ? pixel : SITE_TEMPLATE_PATH + source.placeholder
+//- 			source(data-srcset= source.img, srcset= source.placeholder, media='(min-width: ' + source.media + 'px)')
+//- 		img.swiper-lazy(class= args.img_mod, data-src= args.img, src= args.placeholder,  alt='img')
+
+
+
+//- https://picsum.photos/1330/450
+//- https://picsum.photos/id/1080/1330/450
+//- https://picsum.photos/id/429/1330/450
+//- https://picsum.photos/id/139/1330/450
+//- https://picsum.photos/id/102/1330/450
+//- https://picsum.photos/id/493/1330/450
+
+//- 
+//- https://picsum.photos/id/1080/416/520
+//- https://picsum.photos/id/429/416/520
+//- https://picsum.photos/id/139/416/520
+//- https://picsum.photos/id/102/416/520
+//- https://picsum.photos/id/1020/416/520
+//- https://picsum.photos/id/493/416/520
+
+	429
+	1080
+	139
+	102

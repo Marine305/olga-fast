@@ -1,0 +1,35 @@
+extends ../layout/layout
+
+block vars
+	- var bodyClass = ''
+	- var pageTitle = 'Эталонка'
+	- var dir = './'
+	- var isSidebar = true
+
+	//- подключение миксинов контентных виджетов
+
+
+block main
+	include ../components/etalon/etalon
+
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+block vendorScripts
+	+vendorScripts-includer()
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts
+	//- Элементы форм
+	script(src="./js/vendor/jquery.formstyler.min.js" defer)
+
+	// слежение за скроллом страницы
+	script(src="./js/vendor/noframework.waypoints.min.js")
+
+	script(src="./js/vendor/jquery.formstyler.min.js" defer)
+	// Календарь выбора даты
+	script(src="./js/vendor/moment.min.js")

@@ -1,0 +1,18 @@
+mixin tooltip(args= {})
+	+include-style('tooltip')
+	+include-script('tooltip')
+	span.tt-trigger.js-tt-trigger(
+		data-toggle="tooltip"
+		data-placement="top"
+		data-html="true"
+
+		title= args.value,
+		data-background= args.bg
+		data-hover= args.hover
+		)&attributes(attributes)
+		block
+
+mixin tooltip-2(args= {})
+	+include-style('tooltip')
+	.tooltip-2(class=args.class)
+		block

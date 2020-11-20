@@ -1,0 +1,572 @@
++include-style('basket-page')
++include-script('basket-page')
+
+.basket-page
+	.container
+		.row
+			.col-xl-3.col-lg-4.col-md-12
+				.order-box-wrap
+					.order-box-sub-title
+						p Вы можете использовать бонусные баллы для покупки товаров. Количество баллов вы можете посмотреть на странице <a href="#">История бонусных баллов</a>.
+					.order-box
+						.order-box__title Ваш заказ
+						.order-box__descr
+							.order-box__descr-item
+								.descr-name Товаров
+								.descr-body.preloader-dot 27,23 руб.
+							.order-box__descr-item
+								.descr-name Скидка
+								.descr-body 25%
+							.order-box__descr-item
+								.descr-name Оплата
+								.descr-body Наличными при получении
+							.order-box__descr-item
+								.descr-name Доставка
+								.descr-body Бесплатно
+							.order-box__descr-item
+								.descr-name Срочная доставка
+								.descr-body 8 р.
+								//- .order-box__total
+								//- 	span Итого
+								//- 	.total-price 1 544,48 р.
+								//- a(href="#modal-success-order" data-toggle='modal').order-box-btn-wrap
+								//- 	.btn.btn--primary.btn--large Оформить
+								//- 	.btn.btn--primary.js-order-box-btn.order-box-btn
+								//- 		| Оформить заказ на
+								//- 		span 20 000.00
+								//- 		| р.
+								//- .form-group
+								//- 	.checkbox
+								//- 		input(type='checkbox', value='agree', name='Да', id="agree", checked)
+								//- 		label(for='agree')
+								//- 			| Я согласен на обработку
+								//- 			a(href='#' aria-label='#') персональных данных
+
+
+							.order-box__descr-item
+								.descr-name Списано баллов
+								.descr-body.preloader-dot 30
+							.order-box__descr-item
+								.descr-name Бонусных баллов можно применить к заказу
+								.descr-body 9,03
+						.btn.btn--outline Списать баллы
+						.order-box__total
+							span Итого
+							.total-price 744,48 р.
+						a(href="#modal-success-order" data-toggle='modal').order-box-btn-wrap
+							.btn.btn--primary.btn--large Оформить
+							.btn.btn--primary.js-order-box-btn.order-box-btn
+								| Оформить заказ на
+								span 20 000.00
+								| р.
+						.form-group
+							.checkbox
+								input(type='checkbox', value='agree', name='Да', id="agree", checked)
+								label(for='agree')
+									| Я согласен на обработку
+									a(href='#' aria-label='#') персональных данных
+
+
+			.col-xl-9.col-lg-8.col-md-12
+				.product-list
+					.empty-recycle-bin.js-empty-recycle-bin
+						+icon('i-close')(style='width:16px; height:16px;')
+						span Очистить корзину
+					.product-list__item
+						+product-card({
+							src: './images/prod-01.jpg',
+							status: true,
+							code: 'Код: 4744481010818',
+							title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska». Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+							price: '500,20 р.',
+							sale: '600,20 р.',
+							total: '1 500,60 р.'
+						})
+					.product-list__item
+						+product-card({
+							src: './images/prod-09.jpg',
+							status: true,
+							code: 'Код: 4744481010818',
+							title: 'Рисовые хлебцы с молочным шоколадом, 34г',
+							favourite: true,
+							price: '8, 98 р.',
+							total: '26,94 р.'
+						})
+					.product-list__item
+						+product-card({
+							src: './images/prod-08.jpg',
+							status: false,
+							code: 'Код: 4744481010818',
+							title: 'Консервы пастеризованные. Бульон куриный жидкий Консервы пастеризованные, 350 мл',
+							price: '',
+							sale: '',
+							qty_backet: '',
+							total: '-'
+						})
+					.product-list__item
+						+product-card({
+							src: './images/prod-07.jpg',
+							status: true,
+							code: 'Код: 4744481010818',
+							title: 'Консервы пастеризованные. Бульон куриный жидкий, 350 мл',
+							price: '1 099,99 р.',
+							sale: '5 000 р.',
+							qty_backet: '3',
+							label_sale: 'Акция 50%',
+							total: '3 099,99 р.'
+						})
+					.product-list__item
+						+product-card({
+							src: './images/prod-06.jpg',
+							status: true,
+							code: 'Код: 4744481010818',
+							title: '',
+							price: '999,99 р.',
+							sale: '1000 р.',
+							qty_backet: '1',
+							total: '999,99 р.'
+						})
+				.basket-page__form
+					form.bv-form.js_lazy-load-validation(
+						enctype='multipart/form-data',
+						method='POST',
+						action='#',
+						autocomplete='on',
+						novalidate='novalidate'
+					)
+						.basket-page__title Контакты
+						.basket-page__form-contacts
+							+input({
+								label: 'Ваше имя',
+								type: 'text',
+								name: false,
+								small: false,
+								placeholder: 'Александр',
+								required: true,
+								validation: {
+									message: 'Обязательное поле',
+									regexp: 'Неверный формат',
+									emailaddress: ' ',
+									identical: false
+								}
+							})
+							+input({
+								label: 'Email',
+								type: 'email',
+								name: false,
+								small: false,
+								placeholder: 'example@example.com',
+								required: true,
+								pattern: '[A-Za-zА-Яа-я0-9\_\-]{1,}@[A-Za-zА-Яа-я0-9\_\-]{1,}\.[A-Za-zА-Яа-я0-9]{2,}',
+								validation: {
+									message: 'Обязательное поле',
+									regexp: 'Неверный формат',
+									emailaddress: ' ',
+									identical: false
+								}
+							})
+							+input({
+								label: 'Телефон',
+								type: 'tel',
+								name: false,
+								small: false,
+								placeholder: '+375 (__) ___-__-__',
+								required: true,
+								pattern: 'phone',
+								validation: {
+									message: 'Обязательное поле',
+									regexp: 'Неверный формат',
+									emailaddress: ' ',
+									identical: false
+								}
+							})
+						.basket-page__title Способ доставки
+						+tab-panel
+							.tab-panel__head
+								+tab-item-head({
+									class: "active",
+									head: "Доставка",
+								})
+								+tab-item-head({
+									head: "Самовывоз",
+								})
+							.tab-panel__body
+								+tab-item-body({
+									class: "active"
+								})
+									.basket-page__form-address
+										.wide-input
+											+input({
+												label: 'Город',
+												type: 'text',
+												name: false,
+												small: false,
+												placeholder: false,
+												required: true,
+												validation: {
+													message: 'Обязательное поле',
+													regexp: 'Неверный формат',
+													emailaddress: ' ',
+													identical: false
+												}
+											})
+										.wide-input
+											+input({
+												label: 'Улица',
+												type: 'text',
+												name: false,
+												small: false,
+												placeholder: false,
+												required: true,
+												validation: {
+													message: 'Обязательное поле',
+													regexp: 'Неверный формат',
+													emailaddress: ' ',
+													identical: false
+												}
+											})
+										.small-input
+											+input({
+												label: 'Дом/корпус',
+												type: 'number',
+												name: false,
+												small: false,
+												placeholder: false,
+												required: true,
+												validation: {
+													message: 'Обязательное поле',
+													regexp: 'Неверный формат',
+													emailaddress: ' ',
+													identical: false
+												}
+											})
+										.small-input
+											+input({
+												label: 'Квартира',
+												type: 'number',
+												name: false,
+												small: false,
+												placeholder: false,
+												required: true,
+												validation: {
+													message: 'Обязательное поле',
+													regexp: 'Неверный формат',
+													emailaddress: ' ',
+													identical: false
+												}
+											})
+										//- .small-input
+										//- 	+input({
+										//- 		label: 'Этаж',
+										//- 		type: 'text',
+										//- 		name: false,
+										//- 		small: false,
+										//- 		placeholder: false,
+										//- 		required: true,
+										//- 		validation: {
+										//- 			message: 'Обязательное поле',
+										//- 			regexp: 'Неверный формат',
+										//- 			emailaddress: ' ',
+										//- 			identical: false
+										//- 		}
+										//- 	})
+										//- .small-input
+											+input({
+												label: 'Квартира',
+												type: 'text',
+												name: false,
+												small: false,
+												placeholder: false,
+												required: true,
+												validation: {
+													message: 'Обязательное поле',
+													regexp: 'Неверный формат',
+													emailaddress: ' ',
+													identical: false
+												}
+											})
+										.basket-page__form-address
+											.datapicker-form-group
+												+datapicker({
+													fg_mod: 'form-group--data',
+													label: 'Время доставки',
+													required: true,
+													type: 'number',
+												})
+										
+											.select-form-group
+												.form-group
+													label.form-control-label Время доставки
+														span.label-required *
+													+select({
+														class: 'delivery-select',
+														select_head: '10:00 - 14:00'
+													})
+														+radio-option({
+															radio_class: 'selected',
+															name: 'delivery-time',
+															for: 'part-1',
+															title: '10:00 - 14:00'
+														})
+														+radio-option({
+															name: 'delivery-time',
+															for: 'part-2',
+															title: '14:00 - 18:00'
+														})
+														+radio-option({
+															name: 'delivery-time',
+															for: 'part-3',
+															title: '18:00 - 22:00'
+														})
+										.wide-form-group
+											.form-group
+												.checkbox.checkbox-contactless
+													input(type='checkbox', value='express', name='Срочная доставка', id="express", checked)
+													label(for='express') Бесконтактная доставка
+													.tooltip-parent
+														+icon('i-question')(style='width:12px; height:12px; fill:#828282;')
+														.tooltip-2
+															p Мы хотим сделать ваш клиентский опыт максимально комфортным и безопасным. Для этого мы ввели бесконтактную доставку. Чтобы помочь уменьшить распространение Covid-19 через контакт людей, мы можем оставить ваш заказ рядом с дверью. После доставки наш курьер отойдет от вашей двери, а затем позвонит вам, чтобы вы забрали заказ. Пожалуйста, обратите внимание, что при бесконтактной доставке принимается только онлайн-оплата
+								+tab-item-body.tab-panel__body-item--light
+									.row
+										.col-12
+											.form-group-inline
+												+radio({
+													name: 'DELIVERY',
+													label: 'Минск',
+													checked: true,
+												})(data-deliveryCenter='54, 27.40')
+												+radio({
+													name: 'DELIVERY',
+													label: 'Витебск',
+													checked: false,
+												})(data-deliveryCenter='54, 27.42')
+												+radio({
+													name: 'DELIVERY',
+													label: 'Бобруйск',
+													checked: false,
+												})(data-deliveryCenter='54, 27.44')
+										.col-12.col-lg-5.basket-delivery-pickup-col
+											.basket-delivery-pickup
+												.form-group
+													+select({
+														class: 'shop-adress',
+														select_head: 'Биомаркет «Веска»'
+													})
+														+radio-option({
+															radio_class: 'selected',
+															name: 'shop-adress',
+															for: 'shop-1',
+															title: 'Биомаркет «Веска-1»',
+															center: '54, 27.46'
+														})
+														+radio-option({
+															name: 'shop-adress',
+															for: 'shop-2',
+															title: 'Биомаркет «Веска-2»',
+															center: '54, 27.48'
+														})
+														+radio-option({
+															name: 'shop-adress',
+															for: 'shop-3',
+															title: 'Биомаркет «Веска-3»',
+															center: '54, 27.50'
+														})
+												//- +custom-select({
+												//- 	items: [
+												//- 		{
+												//- 			value: 'Биомаркет «Веска»',
+												//- 			center: '54, 27.46'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска1»',
+												//- 			center: '54, 27.48'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска2»',
+												//- 			center: '54, 27.50'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.52'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.54'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.56'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.58'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.60'
+												//- 		}, {
+												//- 			value: 'Биомаркет «Веска3»',
+												//- 			center: '54, 27.62'
+												//- 		},
+												//- 	]
+												//- })
+												.basket-delivery-text-wrap
+													.basket-delivery-text пр. Победителей 129 - 329 (Метро «Немига»)
+													.basket-delivery-text
+														+icon('clock')(width='24' height='24')
+														| пн–вс с 10:00 до 21:00
+													.basket-delivery-text
+														+icon('i-tel-filled')(width='24' height='24')
+														| пн–вс с 10:00 до 21:00
+												+custom-select({
+													items: [
+														{
+															value: 'Заказ заберу через 15 мин',
+														}, {
+															value: 'Заказ заберу через 10 мин',
+														}, {
+															value: 'Заказ',
+														}, {
+															value: 'Заказ Заказ',
+														},
+													]
+												})
+										.col-12.col-lg-7.basket-delivery-map-wrap
+											.basket-delivery-map#basket-delivery-map
+											script.
+												window.addEventListener('load', function (event) {
+													var placemark_arr = [
+														{
+															coordinates: [54, 27.40],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.42],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.44],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.46],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.48],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.50],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.52],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.54],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.56],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.58],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.60],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+														{
+															coordinates: [54, 27.62],
+															balloonContentBody: '<b>Биомаркет «Веска»</b><br>' +
+																			'Беларусь, Минск, пр-т<br> Победителей, 129–329'
+														},
+													]
+													window.vendorLoader({
+														name: 'api-maps',
+														http: true,
+														path: '//api-maps.yandex.ru/2.1/?apikey=9214f720-2590-4ea9-bad1-1c8d4c58e2a6&lang=ru_RU',
+														event: {
+															scroll: true,
+															click: true,
+															timeout: false,
+															mouseover: 'body'
+														},
+														callback: function callback() {
+															ymaps.ready(init);
+
+															function init() {
+																window.basket_delivery_map = new ymaps.Map("basket-delivery-map", {
+																	center: [54, 27.55],
+																	zoom: 15,
+																	controls: [],
+																});
+
+
+																placemark_arr.forEach(function (item, i) {
+																	var myPlacemark = new ymaps.Placemark(item.coordinates, {
+																		balloonContentBody: item.balloonContentBody,
+																	}, {
+																		// Опции.
+																		// Необходимо указать данный тип макета.
+																		iconLayout: 'default#imageWithContent',
+																		// Своё изображение иконки метки.
+																		iconImageHref: 'images/map-marker.svg',
+																		// Размеры метки.
+																		iconImageSize: [50, 42],
+																		// Смещение левого верхнего угла иконки относительно
+																		// её "ножки" (точки привязки).
+																		iconImageOffset: [0, 0],
+																		// Смещение слоя с содержимым относительно слоя с картинкой.
+																		iconContentOffset: [0, 0],
+																		hideIconOnBalloonOpen: false,
+																	});
+
+																	window.basket_delivery_map.geoObjects.add(myPlacemark);
+																});
+
+
+															}
+														}
+													});
+												});
+
+						.basket-page__title Способ оплаты
+						.basket-page__form-payment
+							.checkbox-payment(style='background-image: url(./images/i-pay-01-png.png)')
+								input#arForm_2279_21(type='radio', checked value='oplata_zakaza_pri_poluchenii', name='all_payment')
+								label.checkbox-payment__label(for='arForm_2279_21')
+									.checkbox-payment__caption Alfa
+									.checkbox-payment__descr 
+
+							.checkbox-payment(style='background-image: url(./images/i-pay-02-png.png)')
+								input#arForm_2279_22(type='radio', value='oplata_zakaza_onlain', name='all_payment')
+								label.checkbox-payment__label(for='arForm_2279_22')
+									.checkbox-payment__caption Оплата заказа онлайн
+									.checkbox-payment__descr Только для юридических лиц. Мы выставим вам счет на оплату по реквизитам юридического лица.
+							.checkbox-payment(style='background-image: url(./images/i-pay-03-png.png)')
+								input#arForm_2279_23(type='radio', value='beznalichnyi_raschet', name='all_payment')
+								label.checkbox-payment__label(for='arForm_2279_23')
+									.checkbox-payment__caption Безналичный расчет
+									.checkbox-payment__descr Только для юридических лиц. Мы выставим вам счет на оплату по реквизитам юридического лица.
+
+						.basket-page__title Комментарий к заказу
+						+textarea({
+							label: 'На что обратить внимание?',
+							required: false,
+							small: false,
+							placeholder: false,
+						})
+					button.btn.btn--primary(type='submit').desktop-submit-order Оформить заказ
+	+slider-product({
+		title: 'Просмотренные товары'
+	})

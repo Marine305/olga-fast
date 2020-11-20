@@ -1,0 +1,39 @@
+@import 'src/assets/css/common/components-import';
+.slam {
+  display: inline-flex;
+  align-items: center;
+  transition: text-decoration .3s;
+  line-height: 1;
+  .icon {
+    margin: 0 7px 0 0;
+    transition: fill .2s;
+    fill: $c-main;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    transition: color .2s;
+    color: $c-main;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1;
+  }
+  @media (min-width: 767px) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  @media (max-width: 575px) {
+    p {
+      color: $c-main;
+    }
+    .icon {
+      margin: 0 7px 2px 0;
+      fill: $c-main;
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,19 @@
++include-style('blog-page')
+.container
+	.row
+		.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+			+tab-list
+				+tab-item({
+					class: 'active',
+					linkname: 'Новости'
+				})
+				+tab-item({
+					linkname: 'Статьи'
+				})
+				+tab-item({
+					linkname: 'Рецепты'
+				})
+			include ../news-pannel/news-pannel
+			include ../pagination/pagination
+			.btn-wrap
+				a(href='#' aria-label='Показать еще').btn.btn--primary.btn--large Показать еще

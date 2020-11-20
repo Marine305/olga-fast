@@ -1,0 +1,39 @@
++include-script('breadcrumb')
+//- .container
++b.breadcrumb
+	+e('ul').__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			+e('a')(href="/" title="Главная" itemprop="item").__link
+				span(itemprop="name") Главная
+				meta(itemprop="position" content="0")
+
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			+e('a')(href="/" title="Внутренняя" itemprop="item").__link
+				span(itemprop="name") Внутренняя
+				meta(itemprop="position" content="2")
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			+e('a')(href="/" title="Внутренняя" itemprop="item").__link
+				span(itemprop="name") Внутренняя Внутренняя Внутренняя Внутренняя
+				meta(itemprop="position" content="2")
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			+e('span')(title="Внутренняя" itemprop="name").__link
+				span(itemprop="name") Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы
+				meta(itemprop="position" content="3")
+
+
+	//- <div class="breadcrumb">
+	//- 	<ul class="breadcrumb__list" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+	//- 		<li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb__link" href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span>
+	//- 			<meta itemprop="position" content="0"></a>
+	//- 		</li>
+	//- 		<li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb__link" href="/" title="Внутренняя" itemprop="item"><span itemprop="name">Внутренняя</span>
+	//- 			<meta itemprop="position" content="2"></a>
+	//- 		</li>
+	//- 		<li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb__link" href="/" title="Внутренняя" itemprop="item"><span itemprop="name">Внутренняя Внутренняя Внутренняя Внутренняя</span>
+	//- 			<meta itemprop="position" content="2"></a>
+	//- 		</li>
+	//- 		<li class="breadcrumb__item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><span class="breadcrumb__link" title="Внутренняя" itemprop="name"><span itemprop="name">Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы Заголовок страницы</span>
+	//- 			<meta itemprop="position" content="3"></span>
+	//- 		</li>
+	//- 	</ul>
+	//- </div>

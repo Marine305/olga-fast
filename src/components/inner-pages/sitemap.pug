@@ -1,0 +1,31 @@
++include-style('inner-pages')
+.container
+	.row
+		.col-12
+			.sitemap
+				+nav({
+					list: [
+						{
+							name: 'Главная'
+						},
+						{
+							name: 'Каталог',
+							list: [
+								{name: 'Список'},
+								{name: 'Сетка'}
+							]
+						},
+						{
+							name: 'Внутренняя',
+							list: [
+								{name: 'О нас'},
+								{
+									name: 'Новости',
+									list: [
+										{name: 'Носость'}
+									]
+								}
+							]
+						},
+					]
+				})

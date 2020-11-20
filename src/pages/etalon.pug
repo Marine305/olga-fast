@@ -1,0 +1,50 @@
+extends ../layout/layout
+
+block vars
+	- var bodyClass = ''
+	- var pageTitle = 'Эталонка'
+	- var dir = './'
+	- var isSidebar = true
+
+	//- подключение миксинов контентных виджетов
+
+block premain
+	.page-header-section
+		.container
+			.row
+				.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+					include ../components/breadcrumb/breadcrumb
+					h1 H1 Заголовок
+
+block main
+	.no-critical.no-critical--preloader
+		+content()
+		.container.content
+			.row
+				.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+					include ../components/etalon/pane-typography
+					include ../components/etalon/pane-images
+					include ../components/etalon/pane-list
+					include ../components/etalon/pane-accordion
+					include ../components/etalon/pane-table
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+block vendorScripts
+	+vendorScripts-includer()
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts
+	//- Элементы форм
+	script(src="./js/vendor/jquery.formstyler.min.js" defer)
+
+	// слежение за скроллом страницы
+	script(src="./js/vendor/noframework.waypoints.min.js")
+
+	script(src="./js/vendor/jquery.formstyler.min.js" defer)
+	// Календарь выбора даты
+	script(src="./js/vendor/moment.min.js")

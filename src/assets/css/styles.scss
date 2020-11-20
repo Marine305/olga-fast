@@ -1,0 +1,22 @@
+//Options
+@import "./common/settings";
+
+//Mixins sass
+@import "./mixins/*.{scss,sass}";
+
+//Mixins styles
+@import "../../mixins/**/style.{scss,sass}";
+
+// fix IE11
+@import "./common/ie";
+
+// fix Safari
+@import "./common/ios";
+
+// no-js fix
+@import "./common/nojs-fix";
+
+// print fix
+@import "./common/_print";
+
+@import "./common/_bitrix-fix";

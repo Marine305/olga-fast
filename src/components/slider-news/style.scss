@@ -1,0 +1,30 @@
+@import 'src/assets/css/common/components-import';
+.slider-news {
+  padding: 80px 0 30px;
+  background: $c-main;
+  &__title {
+    justify-content: center;
+  }
+  @media (max-width: 1024px) {
+    padding: 40px 0;
+  }
+  @media (max-width: 575px) {
+    padding: 20px 0 40px;
+  }
+}
+.swiper-news {
+  .swiper-container {
+    overflow: hidden;
+    margin: -20px;
+    padding: 40px 20px 55px 20px;
+    &:not(.swiper-container-initialized) {
+      .swiper-slide {
+        max-width: 310px;
+        margin: 0 30px 0 0;
+      }
+    }
+    @media (max-width: 575px) {
+      padding: 30px 20px 30px 20px;
+    }
+  }
+}

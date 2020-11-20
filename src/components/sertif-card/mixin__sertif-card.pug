@@ -1,0 +1,16 @@
+mixin sertif-card(args={})
+	+include-style('sertif-card')
+	.sertif-card
+		+lazy-img-slider({
+				img: args.src,
+				placeholder: pixel,
+				img_mod: 'sertif-card__img',
+				wrap_mod: 'sertif-card__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			
+		.sertif-card__descr
+			.head=args.head_descr
+			.body=args.body_descr
+			block 

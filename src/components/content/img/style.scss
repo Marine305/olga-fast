@@ -1,0 +1,165 @@
+@import 'src/assets/css/common/components-import';
+
+.content {
+
+	.video {
+		width: 100%;
+		max-width: 800px;
+		height: 300px;
+		margin: 0 auto 20px;
+		display: block;
+		
+	}
+	img {
+		max-width: 100%;
+		display: block;
+		border-radius: 22px 0px; 
+		line-height: 1.4;
+		@media (max-width: 575px) {
+			border-radius: 0px; 
+		}
+	}
+	.content-img {
+		
+		@include media($sm) {
+			max-width: 100%;
+		}
+
+		.img-descr {
+			display: block;
+			margin-top: 15px;
+			color: #828282;
+			font-size: 14px;
+			text-align: center;
+			font-style: italic;
+		}
+
+		&--left {
+			float: left;
+			margin: 20px 40px 40px 0;
+			@include media($sm) {
+				float: none;
+				margin: 0 auto 40px;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		&--right {
+			float: right;
+			margin: 0 0 20px 20px;
+			@include media($sm) {
+				float: none;
+				margin: 0 auto 20px;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		&--center {
+			max-width: 100%;
+			display: block;
+			float: none;
+			text-align: center;
+			margin: 20px 0 40px;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+
+		@include media($sm) {
+			.img-inner {
+				float: none;
+				text-align: center;
+				display: block;
+				width: 100%;
+				max-width: 100%;
+				margin: 10px 0 20px 0;
+
+				img {
+					float: none;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	img {
+		&[align='left'] {
+			max-width: 40%;
+			margin: 0 40px 20px 0;
+		}
+
+		&[align='right'] {
+			max-width: 40%;
+			margin: 0 0 20px 20px;
+		}
+
+		&[align='center'] {
+			margin: 0 auto 20px;
+		}
+	}
+	// img {
+	// 	margin-bottom: 20px;
+	// }
+	@media (max-width: $sm - 1px) {
+
+	}
+
+
+	@media (min-width: $sm) {
+
+	}
+
+	@media (min-width: $sm) and (max-width: $md - 1px) {
+
+	}
+
+	@media (max-width: $md - 1px) {
+
+	}
+	@media (min-width: $md) {
+
+	}
+
+	@media (min-width: $md) and (max-width: $lg - 1px) {
+
+	}
+
+	@media (max-width: $lg) {
+		img {
+			&[align='left'],
+			&[align='center'],
+			&[align='right'] {
+				max-width: 100%;
+				float: none !important;
+				margin: 0 auto 20px;
+			}
+		}
+
+	}
+	@media (min-width: $lg) {
+		// img {
+		// 	margin-bottom: 20px;
+		// }
+
+		.video {
+			height: 500px;
+		}
+	}
+
+	@media (min-width: $lg) and (max-width: $xl - 1px) {
+
+	}
+
+	@media (min-width: $xl) {
+
+	}
+}

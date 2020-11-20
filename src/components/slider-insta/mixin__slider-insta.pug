@@ -1,0 +1,79 @@
+mixin slider-insta(args= {})
+	+include-style('slider-insta')
+	+include-script('slider-insta')
+	.slider-insta
+		//- .custom-container.custom-container--lg
+		h2.slider-insta__title=args.title
+		+swiper({
+			wrapper_mod: '',
+			container_mod: '',
+			pagination_mod: '',
+			arrow_prev_mod: 'custom-swiper-btn__prev',
+			arrow_next_mod: 'custom-swiper-btn__next',
+			pagination: true,
+			navigation: true,
+		}).swiper-insta.js-swiper-insta
+			//- Слайды
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-01.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__link',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-02.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-03.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-04.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-05.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-06.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})
+			.swiper-slide.insta-card
+				+lazy-img-slider({
+					img: './images/insta-06.jpg',
+					placeholder: pixel,
+					img_mod: 'insta-card__img',
+					wrap_mod: 'insta-card__wrap',
+					link: true,
+					aria_label: false,
+				})

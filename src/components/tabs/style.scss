@@ -1,0 +1,131 @@
+@import 'src/assets/css/common/components-import';
+.tab {
+  margin-bottom: 40px;
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__item {
+    padding: 8px 0;
+    transition: border .3s;
+    border-bottom: 2px solid $c-trp;
+    &:not(:first-child) {
+      margin-left: 5%;
+    }
+    &:hover {
+      .tab__link {
+        color: $c-firm;
+      }
+    }
+    &.active {
+      pointer-events: none;
+      border-bottom: 2px solid $c-firm;
+      .tab__link {
+        color: $c-text;
+      }
+    }
+  }
+  &__link {
+    transition: color .3s;
+    white-space: nowrap;
+    letter-spacing: .01em;
+    color: $c-link;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  @media (max-width: 1600px) {
+    &__item {
+      &:not(:first-child) {
+        margin-left: 4%;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 30px;
+    &__list {
+      overflow: auto;
+      padding-bottom: 10px;
+    }
+    &__item {
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+		margin-bottom: 10px;
+		margin-right: -15px;
+    &__item {
+      &:not(:first-child) {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../assets/css/common/components-import';
+.tab-content {
+  margin: 0 0 30px;
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+.nav-tabs-wrap {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  margin: 0 0 24px;
+  background-color: #fff;
+}
+.nav-tabs {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  margin: 0 -16px;
+  padding: 0 16px;
+  border: none;
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        padding: 7px 12px 7px 0;
+      }
+    }
+    &:last-child {
+      .nav-link {
+        margin-right: 16px;
+      }
+    }
+  }
+  .nav-link {
+    padding: 7px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #83af40;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 12px;
+    &:hover:not(.active) {
+      color: #d15645;
+      border: none;
+      border-bottom: 3px solid transparent;
+    }
+    &:focus:not(.active) {
+      border-bottom: 3px solid transparent;
+    }
+    &.active {
+      border: none;
+      border-bottom: 3px solid #a7d145;
+    }
+  }
+}

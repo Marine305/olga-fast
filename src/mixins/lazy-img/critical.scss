@@ -1,0 +1,8 @@
+.lazy-img-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  &.loaded .preloader {
+    display: none;
+  }
+}

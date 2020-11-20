@@ -1,0 +1,32 @@
+@import 'src/assets/css/common/components-import';
+.favourite-page {
+  .catalog-panel.catalog-panel--list .product-card {
+    &__head {
+      .close {
+        display: block;
+      }
+    }
+    .favourite {
+      display: none;
+    }
+  }
+  .btn-wrap {
+    justify-content: flex-end;
+    @media (max-width: 1023px) {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  .empty-recycle-bin {
+    width: auto;
+    margin: 13px 0 13px 20px;
+    opacity: .7;
+    color: $c-text;
+    .icon {
+      fill: $c-text;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

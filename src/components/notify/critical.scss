@@ -1,0 +1,53 @@
+@import '../../assets/css/common/components-import';
+
+.notify {
+	position: absolute;
+	top: calc(100% - 20px);
+	right: -400px;
+	padding: 16px;
+	background: #FFFFFF;
+	border: 1px solid #E9E9E9;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+	z-index: $zindex-fixed;
+	width: 400px;
+	max-width: 100%;
+	opacity: 0;
+	transition: top .3s, right .3s, opacity .3s, visibility .3s;
+	visibility: hidden;
+
+	&.active {
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.header-scroll {
+	.notify {
+		position: absolute;
+		top: calc(100% - 10px);
+	}
+}
+
+.notify-title {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #000000;
+	margin: 0 0 12px;
+}
+.notify-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3994 13.5498L26.0744 26.2248' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M25.9238 13.5498L13.2488 26.2248' stroke='black' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+	z-index: 1;
+}

@@ -1,0 +1,65 @@
+// Grid
+$xl: 1600px;
+$lg: 1200px;
+$md: 1024px;
+$sm: 768px;
+$xs: 576px;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl
+);
+
+$container-max-widths: (
+	xs: 575px,
+	sm: 768px,
+	md: 1024px,
+	lg: 1200px,
+	xl: 1600px
+);
+
+
+$f-size: 15px;
+$f-main: 'Roboto', Arial, Verdana, sans-serif;
+$f-sec: 'Montserrat', Arial, Verdana, sans-serif;
+$f-beuty: 'Pattaya';
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:                   100 !default;
+$zindex-sticky:                     120 !default;
+$zindex-fixed:                      130 !default;
+$zindex-modal-backdrop:             140 !default;
+$zindex-modal:                      150 !default;
+$zindex-popover:                    160 !default;
+$zindex-tooltip:                    170 !default;
+$zindex-preloader:                  180 !default;
+
+// Colors
+$c-firm:					rgba(62, 13, 19, 1);
+$c-firm-hover:		rgba(97, 19, 64, 1);;
+
+$c-main:					rgb(147, 126, 129);
+$c-main-hover:		#282828;
+
+$c-text:					#282828;
+$c-link:					#bb9d03;
+$c-link-hover:		#a78114;
+
+$c-error:					#F24040;
+$c-trp:						transparent;
+
+$blue:						#234399;
+$red:							#F45057;
+$green:						#379F2F;
+$yellow:					#e8a12b;
+$white:						#fff;
+$black:						#000;
+
+// $horisontal-gradient: linear-gradient(180deg, rgba(15, 30, 44, 0) 0%, rgba(26, 24, 106, 0) 47.32%, rgba(0, 81, 155, 0.3) 100%)

@@ -1,0 +1,194 @@
++include-style('product-page')
+//- +include-style('tooltip')
++include-script('product-page')
+
+.product-page
+	.container
+		.row
+			.col-xl-7.offset-xl-1.col-lg-8.col-md-12
+				.product-page__first-part
+					.label-list
+						.label-list__item.label-sale Акция -25%
+						.label-list__item.label-new Новинка
+						.label-list__item.label-recomend Рекомендуем
+					+slider-product-page
+					.product-description
+						.product-description__info
+							.status
+								.status__true В наличии
+							.code Код: 4744481010818
+							.favourite.active
+								+icon('i-like')(style='width:26px; height:26px;')
+								span В избранное
+						.product-description__title Состав
+						.product-description__body Вода, куриные кости, лук, морковь, петрушка, шампиньоны, морская соль, черный перец, тимьян, лавровый лист.
+
+						.product-description__title Другие фасовки
+						.product-description__targets
+							+target-link({
+								src: './images/prod-07.jpg',
+								title: 'Консервы 750 мл'
+							})
+							+target-link({
+								src: './images/prod-07.jpg',
+								title: 'Консервы пастеризованные. Бульон куриный жидкий, 2 л'
+							})
+							+target-link({
+								src: './images/prod-07.jpg',
+								title: 'Консервы пастеризованные. Бульон куриный жидкий, 500 мл'
+							})
+							+target-link({
+								src: './images/prod-07.jpg',
+								title: 'Консервы пастеризованные. Бульон куриный жидкий, 1 л'
+							})
+							+target-link({
+								src: './images/prod-07.jpg',
+								title: 'Консервы пастеризованные. Бульон куриный жидкий, 250.50 мл'
+							})
+				.product-description
+						.product-description__title Описание
+						.product-description__body Бульон — самая важная часть супа, которая придает блюду его вкус и внешний вид. Правильный бульон кипятят около 12 часов. Шеф-повара избавили нас от этого и сделали свой собственный домашний бульон, используя максимум эстонских ингредиентов. Без лактозы и глютена. Готовьте в удовольствие с Food Studio. Приятного аппетита.
+				.product-table
+					.product-tag
+						.product-tag__item
+							+icon('i-tag-01')(style='width:26px; height:25px; fill:#fff')
+							span Без глютена
+						.product-tag__item
+							+icon('i-tag-02')(style='width:26px; height:26px; fill:#fff')
+							span Для детей
+						.product-tag__item
+							+icon('i-tag-03')(style='width:26px; height:26px; fill:#fff')
+							span Для веганов
+						.product-tag__item
+							+icon('i-tag-04')(style='width:26px; height:26px; fill:#fff')
+							span Фермерский продукт
+						.product-tag__item
+							+icon('i-tag-05')(style='width:26px; height:26px; fill:#fff')
+							span Без лактозы 
+					.product-table__title Аллергены
+					.product-table__item.negative
+						.left-col.tooltip-parent
+							span Яйцо
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Не обязательно аллергия может быть на куриные яйца. При этом может быть только аллергия на белок или наоборот желток, так как в их составе разные провокаторы аллергии. Чаще всего алергики дети, но у половины к 16 это проходит. Такая аллергия тяжело переносится так как большинство блюд и продуктов содержит яйцо, так же вещества входящие в их состав есть в вакцинах от гриппа.
+						.right-col
+							+icon('i-negative')(style='width:16px; height:16px; fill:#4F681E')
+							span Нет
+					.product-table__item.positive
+						.left-col.tooltip-parent
+							span Горчица
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Часто какие нибудь специи. Приправы и пряности часто могут вызвать аллергию, но горчица является самой распространенной пряностью и соответственно людей у которых аллергию на нее большое количество. Поэтому стоит это учитывать когда ставите кому нибудь горчичники, вдруг у него аллергия.
+						.right-col
+							+icon('i-positive')(style='width:16px; height:16px; fill:#C74A2C;')
+							span Есть
+					.product-table__item.negative 
+						.left-col.tooltip-parent
+							span Рыба
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p В рыбе, есть такое вещество как" парвальбумин" - которое и является провокатором аллергии, чаще всего она происходит при употреблении морской рыбы, речную можно спокойно включить в свой рацион. Данной аллергией чаще всего болеют взрослые.
+						.right-col
+							+icon('i-negative')(style='width:16px; height:16px; fill:#4F681E')
+							span Нет
+					.product-table__item.negative 
+						.left-col.tooltip-parent
+							span Соевые бобы
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Чаще всего эта аллергия встречается у детей младше 3 лет, связано это с тем что их кормили соевым молоком по тем или иным причинам. Данная аллергия не очень опасно, но тоже крайне не приятно. Стоит учитывать что соя сейчас в очень большом количестве продуктов.
+						.right-col
+							+icon('i-negative')(style='width:16px; height:16px; fill:#4F681E')
+							span Нет
+					.product-table__item.positive
+						.left-col.tooltip-parent
+							span Молоко
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Очень любимый всеми продукт молоко входит в топ-3 самых аллергенных продуктов из нескольких составляющих в молоке. Молоко входит так же в состав большого кол- ва продуктов, такие как сыр, масло и т.д в том числе и косметику. Аллергия может проявиться в детстве, а с возрастом исчезнуть.Просьба не путать с непереносимостью лактозы.
+						.right-col
+							+icon('i-positive')(style='width:16px; height:16px; fill:#C74A2C; stroke:#fff')
+							span Есть
+					.product-table__item.negative 
+						.left-col.tooltip-parent
+							span Cельдерей
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Сельдерей является одним из самых аллергенных овощей, способных вызвать тяжелые жизнеугрожающие аллергические реакции. Он содержит аллергены, среди которых гомологичный по структуре белкам пыльцы березы главный аллерген сельдерея, перекрестно-реагирующие углеводные детерминанты, белки – переносчики липидов, профилины.
+						.right-col
+							+icon('i-negative')(style='width:16px; height:16px; fill:#4F681E')
+							span Нет
+					.product-table__item.negative 
+						.left-col.tooltip-parent
+							span Орехи
+							+icon('i-question')(style='width:12px; height:12px; fill:#828282')
+							.tooltip-2
+								p Защитой от пищевой аллергии является исключение из рациона непереносимых продуктов питания. В случае с аллергией на орехи это означает, что орех или орехи, на которые у человека есть аллергия, должны быть исключены из рациона.
+						.right-col
+							+icon('i-negative')(style='width:16px; height:16px; fill:#4F681E')
+							span Нет
+				
+				.product-description.product-description-bg-gray
+						.product-description__title Xранение
+						.product-description__body Хранить при температуре от 2 до 6 градусов. После вскрытия упаковки хранить при температуре от 2 до 6 градусов не более 3 дней.
+				.product-description
+						.product-description__title Производитель
+						.product-description__body "Puljong OU", Эстония
+			.col-xl-3.col-lg-4.fixed-right-column.sale-block-3
+				.sale-block
+					.sale-block__container
+						.sale-block__item.label-sale
+							.sale-block__item-head Акция -25% <span>На серию продуктов FOOD STUDIO</span>
+							.sale-block__item-body На серию продуктов FOOD STUDIO до 20 июля действует скидка 25%
+					.sale-block__container
+						.sale-block__item.label-new
+							.sale-block__item-head Новости
+							.sale-block__item-body На серию продуктов FOOD STUDIO до 20 июля действует скидка 25% На серию продуктов FOOD STUDIO до 20 июля действует скидка 25%
+					.sale-block__container
+						.sale-block__item.label-recomend
+							.sale-block__item-head Рекомендации
+							.sale-block__item-body На серию продуктов FOOD STUDIO до 20 июля действует скидка 25%
+				
+				.fixed-card-body-wrap
+					+product-card({
+						class_mod: 'fixed-card-body js-fixed-card-body',
+						status: true,
+						code: 'Код: 4744481010818', 
+						title: '',
+						price: '12,99 р. <span>за 0,4 кг</span>',
+						sale: '10,59 р.',
+						price_per_kg: '20,15 руб. за 1 кг',
+						qty_backet: '3',
+					})
+				.product-card-sub-title
+					+icon('i-close-lg')(style='width:16px; height:16px; fill:#E37C21')
+					span Цены на товары указаны справочно и могут отличаться от цен, установленных на основании нового поступления
+		.row
+			.col-xl-7.offset-xl-1.col-lg-8.col-md-12
+				+slider-sertif({
+					title: 'Сертификаты',
+					class_modificator: 'js-swiper-sertif-narrow'
+				})
+				+slider-news({
+					class_modificator: 'js-swiper-news-02',
+					title: 'Рецепты'
+				})
+	.product-page__slider-1
+		+slider-product({
+			title: 'С этим товаром покупают'
+		})
+	.product-page__slider-2
+		+lazy-img({
+			img: 'images/bg-leaf-wide.svg',
+			placeholder: pixel,
+			img_mod: 'product-page__slider-2__left-bg',
+			wrap_mod: 'product-page__slider-2__left-bg-wrap',
+			link: false,
+			aria_label: false,
+		})
+
+		+slider-product({
+			title: 'Аналогичные товары'
+		})

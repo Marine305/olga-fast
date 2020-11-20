@@ -1,0 +1,12 @@
+mixin lazy-video-youtube(args= {})
+	//- ПРИМЕР
+		+lazy-video-youtube({
+			src: "https://www.youtube.com/embed/djV11Xbc914",
+		}).MOD_CLASS
+	iframe.lazy-video(
+		class= args.video_mod,
+		data-src= args.src,
+		frameborder= args.frameborder || "0",
+		allow= args.allow || "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen)&attributes(attributes)
+

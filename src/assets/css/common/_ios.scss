@@ -1,0 +1,9 @@
+body {
+  &.browser-safari {
+    // backface-visibility: hidden;
+		// transform-style: preserve-3d;
+		.product-page__slider-2__left-bg-wrap {
+			display: none;
+		}
+  }
+}

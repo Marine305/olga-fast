@@ -1,0 +1,29 @@
++include-script('breadcrumb')
++b.breadcrumb.not-init
+	.container
+		.row
+			.col-12
+				+e('ul').__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+					+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="/" title="Главная" itemprop="item")
+							span(itemprop="name") Главная
+							meta(itemprop="position" content="0")
+					+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="#" title="Внутренняя" itemprop="item")
+							span(itemprop="name") Внутренняя1
+							meta(itemprop="position" content="2")
+					+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="#" title="Внутренняя" itemprop="item")
+							span(itemprop="name") Внутренняя2 Очень длинное название Очень длинное название
+							meta(itemprop="position" content="2")
+					+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="#" title="Внутренняя" itemprop="item")
+							span(itemprop="name") Внутренняя3 Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное название Очень длинное назван Очень длинное название Очень длинное Очень длинное название Очень длинное
+							meta(itemprop="position" content="2")
+					+e('li').__item.--mobile(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						a(href="#" title="Внутренняя" itemprop="item")
+							span(itemprop="name") Предпоследний пункт
+							meta(itemprop="position" content="2")
+					+e('li').__item.active(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						span(itemprop="name") Эталонка
+						meta(itemprop="position" content="2")

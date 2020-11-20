@@ -1,0 +1,187 @@
++include-style('loyalty-page')
++include-style('accordeon')
++include-style('order-page')
+.container
+	.row
+		.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+			.loyalty-page
+				.row
+					.col-md-10.offset-md-1
+						.loyalty-page-head
+							.loyalty-page-head__left-col
+								.loyalty-page-head__title Делайте заказы, получайте баллы и&nbsp;оплачивайте накопленными баллами свои заказы и&nbsp;доставку!
+							.loyalty-page-head__right-col
+								.bonus-block__descr Итого потрачено #veskabonus:
+								.bonus-block__num 20,00
+
+						//- +tab-list
+						//- 	+tab-item({
+						//- 		linkname: 'Профиль',
+						//- 		href: '/local/templates/html/profil.html',
+						//- 	})
+						//- 	+tab-item({
+						//- 		class: 'active',
+						//- 		linkname: 'Программа лояльности',
+						//- 	})
+						//- 	+tab-item({
+						//- 		linkname: 'Заказы',
+						//- 		href: '/local/templates/html/order.html'
+						//- 	})
+						//- 	+tab-item({
+						//- 		linkname: 'Избранное',
+						//- 		href: '/local/templates/html/loyalty.html',
+						//- 	})
+
+						.bonus-block.vip-status-active
+							.bonus-block__body
+								.card-wrap
+									img(src="./images/st-vip.png", alt="vip status")
+				.window-wide-block
+					.bonus-block-wrap.green-status-active
+						// .green-status-active /// .gold-status-active /// .platinum-status-active
+						.bonus-block-list
+							.bonus-block.green-status
+								.bonus-block__head
+									.bonus-block__num 54.20
+									.bonus-block__descr Доступных бонусных балла
+								.bonus-block__body
+									.card-wrap
+										img(src="./images/st-green.png", alt="green status")
+									.bonus-block__descr Статус: <b>#veskabonus&nbsp;standart</b>
+								.progress-body
+									.progress-body__item
+										span
+							.bonus-block.gold-status
+								.bonus-block__head
+									.bonus-block__num 54.20
+									.bonus-block__descr Доступных бонусных балла
+								.bonus-block__body
+									.card-wrap
+											img(src="./images/st-gold.png", alt="gold status")
+									.card-status Статус: <b>#veskabonus&nbsp;gold</b>
+								.bonus-block__info
+									.bonus-block__descr Для получения статуса <b>#veskabonus&nbsp;gold</b> осталось потратить баллов:
+									.bonus-block__num 200
+								.progress-body.active
+									.progress-body__item
+										span(style='width: 70%')
+							.bonus-block.platinum-status
+								.bonus-block__head
+									.bonus-block__num 54.20
+									.bonus-block__descr Доступных бонусных балла
+								.bonus-block__body
+									.card-wrap
+											img(src="./images/st-plat.png", alt="platinum status")
+									.bonus-block__descr Статус: <b>#veskabonus&nbsp;platinum</b>
+								.bonus-block__info
+									.bonus-block__descr Для получения статуса <b>#veskabonus&nbsp;platinum</b> необходимо использовать:
+									.bonus-block__num 400
+								.progress-body
+									.progress-body__item
+										span
+						//- .bonus-progress
+						//- 	.progress-body
+						//- 		.progress-body__item
+						//- 			span
+						//- 		.progress-body__item
+						//- 			span(style='width: 70%')
+						//- 		.progress-body__item
+						//- 			span(style='width: 70%')
+				.row
+					.col-md-10.offset-md-1
+						p С условиями бонусной программы вы можете ознакомиться в Положении о бонусной программе #veskabonus. Баланс и история начислений отражает статистику на текущий момент и не отражает списания и начисления по незавершенным заказам. В статистике не отражены баллы, которые начислены, но не доступные еще к использованию. Баллы начисленные доступны к использованию через 24 часа после покупки согласно положению о бонусной программе. В расшифровке списаний и начислений по дню доступна информация по списаниям и начислениям по каждому заказу с указанием времени и даты заказа. 
+
+						p Если в заказе были позиции с разным уровнем начисления (например товары на акции с повышенным накоплением #veskabonus) в статистике отражены начисления отдельными суммами по стандартным правилам начисления и по акционным начислениям. По всем вопросам, связанным с корректностью начисления и/или списания баллов обращаться по e-mail XXXX с указанием Вашего номера телефона и/или номера бонусной карты
+
+						.order-page
+							h2 История начисления и списания ваших баллов
+							.order-page__accordeon
+								.accordeon.order-accordeon
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+									.accordeon__item
+										.accordeon__head
+											<div class="icon-wrap">
+												<svg class="icon" style="width:19px; height:20px; fill:#8DC63F;">
+													<use xlink:href="./images/sprite.svg#i-arrow-top-md"></use>
+												</svg>
+											</div>
+											.accordeon__title -3.37
+											.order-date 03.11.2020
+											.accordeon__order-head
+												.order-status Изменение списаний или начислений с учетом всех заказов за день
+						//- .loyalty-page__title Как получить баллы?
+						//- p Вcё просто! Баллы начисляются на всю сумму заказа, в т.ч. на акционные товары и заказы, к которым был применен скидочный купон.
+						//- p Размер начисления баллов зависит от общей суммы всех заказов за последние 365 дней. Сумма заказов учитывается со дня старта бонусной программы 01.03.2019
+						//- .window-wide-block.window-wide-block--white
+						//- 	.numerable-list
+						//- 		.numerable-list__item
+						//- 			.numerable-list__item-num 1
+						//- 			.numerable-list__item-descr При общей сумме покупок на 500 руб. вы получаете на счет баллы в размере 5% от суммы заказа
+						//- 		.numerable-list__item
+						//- 			.numerable-list__item-num 2
+						//- 			.numerable-list__item-descr При общей сумме покупок на 500 руб. При общей сумме покупок на 500 руб. вы получаете на счет баллы в размере 5% от суммы заказа
+						//- 		.numerable-list__item
+						//- 			.numerable-list__item-num 3
+						//- 			.numerable-list__item-descr При общей сумме покупок на 500 руб. вы получаете на счет баллы в размере 5% от суммы заказа
+						//- 		.numerable-list__item
+						//- 			.numerable-list__item-num 4
+						//- 			.numerable-list__item-descr  размере 5% от суммы заказа
+
+
+						//- p В процессе оформления заказа выберите в блоке "Использовать в заказе" - "Бонусные баллы". В появившуюся строку введите нужное вам колличество баллов из доступных для списания и нажмите галочку. Баллы будут применены в заказе. 
+						//- p Оплатить баллами можно не более 50% от суммы заказа. 
+						//- p Узнать количество баллов, посмотреть историю начисления и списания можно в личном кабинете.

@@ -1,0 +1,58 @@
+mixin accordeon(args)
+	+include-style('accordeon')
+	+include-script('accordeon')
+	-args = args || {}
+	.accordeon(class=args.class)
+		block
+
+mixin accodeon-item(args)
+	-args = args || {}
+	.js-accordeon-trigger.accordeon__item(class=args.class)
+		if (args.class === 'active')
+			.accordeon__head
+				if args.src
+					span.accordeon__head-img-wrap
+						img(src=args.src, alt=args.head title= args.head).accordeon__head-img
+				.accordeon__title!=args.head
+					.icon-wrap
+						+icon('i-arrow-top-md')(style='width:19px; height:20px; fill:#8DC63F')
+				if args.order_status
+					.accordeon__order-head
+						.order-date 20.10.2020
+						if args.order_status === 'completed'
+							.order-status.order-completed Доставлен
+							.btn.btn--primary Повторить заказ
+						if args.order_status === 'in-progress'
+							.order-status.order-inprogress В обработке
+							.cancel-order
+								+icon('i-close')(style='width:26px; height:26px;')
+								| Отменить заказ
+			.accordeon__body(class='active')
+				block
+		else
+			.accordeon__head
+				if args.src
+					+lazy-img({
+						img: args.src,
+						placeholder: pixel,
+						img_mod: 'accordeon__head-img',
+						wrap_mod: 'accordeon__head-img-wrap',
+						link: false,
+						aria_label: false,
+					})
+				.accordeon__title=args.head
+					.icon-wrap
+						+icon('i-arrow-top-md')(style='width:19px; height:20px; fill:#8DC63F')
+				if args.order_status
+					.accordeon__order-head
+						.order-date 20.10.2020
+						if args.order_status === 'completed'
+							.order-status.order-completed Доставлен
+							.btn.btn--primary Повторить заказ
+						if args.order_status === 'in-progress'
+							.order-status.order-inprogress В обработке
+							.cancel-order
+								+icon('i-close')(style='width:26px; height:26px;')
+								| Отменить заказ
+			.accordeon__body(style="display: none")
+				block

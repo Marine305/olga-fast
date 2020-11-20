@@ -1,0 +1,15 @@
+mixin page-header(args= {})
+	+include-style('page-header')
+	.page-header-section
+		.container
+			.row
+				.col-12.col-lg-8.offset-lg-2
+					if (args.breadcrumb)
+						.row
+							.col-12
+								include ../breadcrumb/breadcrumb
+					.page-header-container
+						.page-header-body
+							h1.h1.page-header-title!= args.title
+							if(args.desc)
+								.page-header-desc!= args.desc

@@ -1,0 +1,188 @@
+h2 Слайдер с навигацией
++swiper-with-nav({
+	main: {
+		wrapper_mod: '',
+		container_mod: 'etalon-slider-container',
+		pagination_mod: '',
+		arrow_prev_mod: '',
+		arrow_next_mod: '',
+		pagination: false,
+		navigation: true,
+	},
+	nav: {
+		wrapper_mod: '',
+		container_mod: 'etalon-slider-container',
+		pagination_mod: '',
+		arrow_prev_mod: '',
+		arrow_next_mod: '',
+		pagination: false,
+		navigation: false,
+		http: true,
+		list: [
+			{
+				img: 'https://source.unsplash.com/random/230x70',
+				http: true,
+				img_placeholder: pixel,
+			}, {
+				img: 'https://source.unsplash.com/random/230x70',
+				http: true,
+				img_placeholder: pixel,
+			}, {
+				img: 'https://source.unsplash.com/random/230x70',
+				http: true,
+				img_placeholder: pixel,
+			}, {
+				img: 'https://source.unsplash.com/random/230x70',
+				http: true,
+				img_placeholder: pixel,
+			}, {
+				img: 'https://source.unsplash.com/random/230x70',
+				http: true,
+				img_placeholder: pixel,
+			},
+		],
+		img_mod: 'swiper-thumbnail-img swiper-thumbnail-img--etalon',
+		wrap_mod: 'swiper-thumbnail swiper-thumbnail--etalon',
+	},
+}).etalon-slider-with-nav.js-etalon-slider-with-nav
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600',
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: pixel,
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600',
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600',
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600',
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+h2 Слайдер
++swiper({
+	container_mod: 'etalon-slider-container',
+	wrapper_mod: 'etalon-slider-wrapper',
+	navigation: true,
+	arrow_prev_mod: '',
+	arrow_next_mod: '',
+	pagination: true,
+	pagination_mod: '',
+	list_mod: '',
+}).etalon-slider.js-etalon-slider
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600', img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: pixel,
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600', img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600',
+		img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+	+lazy-img-slider({
+		http: true,
+		img: 'https://source.unsplash.com/random/800x600',
+		placeholder: 'https://source.unsplash.com/random/800x600', img_mod: 'etalon-slide-img',
+		wrap_mod: 'etalon-slide-img-wrap',
+	}).swiper-slide.etalon-slide
+style.
+	.swiper-thumbnail-img--etalon {
+		width: 100%;
+	}
+
+	.etalon-slider-container {
+		overflow: hidden;
+	}
+
+	.swiper-slide-thumb-active {
+		position: relative;
+		display: block;
+	}
+
+	.swiper-slide-thumb-active:before {
+		box-sizing: border-box;
+		content: '';
+		border: 5px solid #83AF40;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+	}
+
+script.
+	window.addEventListener('load', function (event) {
+
+		$('.js-etalon-slider').each(function (i, el) {
+			window.slam_slider({
+				el: el,
+				args: {
+					autoHeight: true,
+					lazy: true,
+					loop: false,
+					slidesPerView: 1,
+					spaceBetween: 0,
+					watchOverflow: true,
+				}
+			})
+		})
+
+		window.slam_slider_with_nav({
+			$el: $('.js-etalon-slider-with-nav'),
+			args_main: {
+				autoHeight: false,
+				lazy: true,
+				loop: false,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				watchOverflow: true,
+			},
+			args_nav: {
+				autoHeight: false,
+				lazy: true,
+				loop: false,
+				slidesPerView: 3,
+				spaceBetween: 0,
+				watchOverflow: true,
+			},
+		})
+	});

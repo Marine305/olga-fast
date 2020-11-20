@@ -1,0 +1,5 @@
+mixin tab-content(args= {})
+	+include-script('tabs')
+	+include-style('tabs')
+	.tab-content(class= args.mod)&attributes(attributes)
+		block

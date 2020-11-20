@@ -1,0 +1,46 @@
+@import '../../assets/css/common/components-import';
+.social-list {
+  display: flex;
+  align-items: center;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid rgba(#ababab, .3);
+  border-radius: 50%;
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media (max-width: $sm - 1px) {
+}
+@media (min-width: $sm) {
+}
+@media (min-width: $sm) and (max-width: $md - 1px) {
+}
+@media (min-width: $md) {
+}
+@media (min-width: $md) and (max-width: $lg - 1px) {
+}
+@media (min-width: $lg) {
+  .social {
+    transition: border .3s;
+    svg {
+      transition: fill .3s;
+    }
+    &:hover {
+      border: 1px solid #d15645;
+      svg {
+        fill: #d15645;
+      }
+    }
+  }
+}
+@media (min-width: $lg) and (max-width: $xl - 1px) {
+}
+@media (min-width: $xl) {
+}

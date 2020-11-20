@@ -1,0 +1,11 @@
+-
+	var SITE_TEMPLATE_PATH = '/local/templates/html/'
+	var pixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+	function getRandom() {
+		return Math.floor(Math.random() * 9999999999)
+	}
+	function replacePhone(phone) {
+		return phone.replace(/\s/gi, '').replace(/\(/gi, '').replace(/\)/gi, '').replace(/\-/gi, '')
+	}
+include data-base/product
+include data-base/article

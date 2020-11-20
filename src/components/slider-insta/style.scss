@@ -1,0 +1,88 @@
+@import '../../assets/css/common/components-import';
+.slider-insta {
+  &__title {
+    justify-content: center;
+    margin-bottom: 30px;
+    color: $white;
+  }
+  .swiper-container {
+    overflow: hidden;
+    &:not(.swiper-container-initialized) {
+      .swiper-slide {
+        max-width: 261px;
+        margin: 0;
+      }
+    }
+  }
+  .custom-swiper-btn {
+    z-index: 5;
+    border: 1px solid $white;
+    .icon {
+      fill: $white;
+    }
+    &:active, &:hover {
+      border: 1px solid $c-firm;
+      .icon {
+        fill: $c-firm;
+      }
+    }
+  }
+  .custom-swiper-btn__prev {
+    left: 3%;
+  }
+  .custom-swiper-btn__next {
+    right: 3%;
+  }
+  .swiper-button-disabled {
+    z-index: 5;
+    cursor: default;
+    border: 1px solid $c-link;
+    .icon {
+      fill: $c-link;
+    }
+    &:hover, &:active {
+      border: 1px solid $c-link;
+      .icon {
+        fill: $c-link;
+      }
+    }
+  }
+  .swiper-pagination {
+    bottom: -52px;
+  }
+  @media (min-width: 1599px) {
+    min-height: 332px;
+  }
+  @media (min-width: 1599px) {
+    min-height: 270px;
+  }
+  @media (max-width: 375px) {
+    min-height: 260px;
+    .swiper-slide {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
+.insta-card {
+  &__link, &__wrap {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 261px;
+    max-height: 260px;
+    transition: transform .3s, z-index .3s;
+    @media (min-width: 992px) {
+      &:hover {
+        z-index: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+}

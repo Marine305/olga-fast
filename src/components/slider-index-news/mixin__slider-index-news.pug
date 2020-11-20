@@ -1,0 +1,34 @@
+mixin slider-index-news(args= {})
+	+include-style('slider-index-news')
+	+include-script('slider-index-news')
+	.slider-index-news
+		+swiper({
+			wrapper_mod: '',
+			container_mod: '',
+			pagination_mod: '',
+			arrow_prev_mod: 'custom-swiper-btn__prev',
+			arrow_next_mod: 'custom-swiper-btn__next',
+			pagination: true,
+			navigation: true,
+		}).swiper-index-news.js-swiper-index-news
+			//- Слайды
+			.swiper-slide
+				+news-card({
+					src: './images/blog-01.jpg',
+					date: '12 июня 2020',
+					title: 'Гранола: хрустящие мюсли на завтрак'
+				})
+			.swiper-slide
+				+news-card({
+					class: 'news-slider-card',
+					src: './images/blog-02.jpg',
+					date: '12 июня 2020',
+					title: 'Рецепт: пряное печенье с начинкой из гороха'
+				}) 
+			.swiper-slide
+				+news-card({
+					class: 'news-slider-card',
+					src: './images/blog-03.jpg',
+					date: '12 июня 2020',
+					title: 'NEW Yuzu Ponzu — Японский цитрусовый соус'
+				})

@@ -1,0 +1,269 @@
++include-style('order-page')
+
+.container
+	.row
+		.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+			.order-page
+				+tab-list
+					+tab-item({
+						linkname: 'Профиль',
+						href: '/local/templates/html/profil.html',
+					})
+					+tab-item({
+						linkname: 'Программа лояльности',
+						href: '/local/templates/html/loyalty.html',
+					})
+					+tab-item({
+						class: 'active',
+						linkname: 'Заказы',
+					})
+					+tab-item({
+						linkname: 'Избранное',
+						href: '/local/templates/html/favourite.html',
+					})
+				.order-page__sorting
+					.order-page__sorting-title Сортировать:
+					+select({
+						class: 'order-page-select',
+						select_head: 'Все'
+					})
+						+radio-option ({
+							radio_class: 'selected',
+							name: 'sorting',
+							for: 'all',
+							title: 'Все'
+						})
+						+radio-option ({
+							name: 'sorting',
+							for: 'new',
+							title: 'Сначала новые'
+						})
+						+radio-option ({
+							name: 'sorting',
+							for: 'old',
+							title: 'Сначала давние'
+						})
+				.order-page__accordeon
+					+accordeon({
+						class: "order-accordeon",
+					})
+						+accodeon-item({
+							class: "active",
+							head: '№ 123456789',
+							order_status: 'completed',
+						})
+							.order-list
+								+product-card({
+									src: './images/prod-01.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska». Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+									price: '500,20 р.',
+									sale: '600,20 р.',
+									total: '1 500,60 р.',
+									order_ready: '3'
+								})
+						
+								+product-card({
+									src: './images/prod-09.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Рисовые хлебцы с молочным шоколадом, 34г',
+									favourite: true,
+									price: '8, 98 р.',
+									total: '26,94 р.',
+									order_ready: '3 шт.'
+								})
+							
+								+product-card({
+									src: './images/prod-08.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: 'Консервы пастеризованные. Бульон куриный жидкий Консервы пастеризованные, 350 мл',
+									price: '0',
+									sale: '',
+									qty_backet: '',
+									total: '-',
+									order_ready: '3 шт.'
+								})
+							
+								+product-card({
+									src: './images/prod-07.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Консервы пастеризованные. Бульон куриный жидкий, 350 мл',
+									price: '1 099,99 р.',
+									sale: '5 000 р.',
+									qty_backet: '3',
+									label_sale: 'Акция 50%',
+									order_ready: '3 шт.',
+									total: '3 099,99 р.'
+								})
+							
+								+product-card({
+									src: './images/prod-06.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: '',
+									price: '999,99 р.',
+									sale: '1000 р.',
+									qty_backet: '1',
+									order_ready: '3 шт.',
+									total: '999,99 р.'
+								})
+							
+							.order-description
+								.order-description__item
+									.name Оплата
+									.detail Наличными при получении
+								.order-description__item
+									.name Доставка
+									.detail Бесплатно
+								.order-description__item
+									.name Срочная доставка
+									.detail 8 р.
+								.order-description__item
+									.name Итого
+									.total-price 1 544.48 р.
+						+accodeon-item({
+							head: '№ 112233445',
+							order_status: 'in-progress',
+						})
+							.order-list
+								+product-card({
+									src: './images/prod-01.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska». Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+									price: '500,20 р.',
+									sale: '600,20 р.',
+									total: '1 500,60 р.'
+								})
+						
+								+product-card({
+									src: './images/prod-09.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Рисовые хлебцы с молочным шоколадом, 34г',
+									favourite: true,
+									price: '8, 98 р.',
+									total: '26,94 р.'
+								})
+							
+								+product-card({
+									src: './images/prod-08.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: 'Консервы пастеризованные. Бульон куриный жидкий Консервы пастеризованные, 350 мл',
+									price: '0',
+									sale: '',
+									qty_backet: '',
+									total: '-'
+								})
+							
+								+product-card({
+									src: './images/prod-07.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Консервы пастеризованные. Бульон куриный жидкий, 350 мл',
+									price: '1 099,99 р.',
+									sale: '5 000 р.',
+									qty_backet: '3',
+									label_sale: 'Акция 50%',
+									total: '3 099,99 р.'
+								})
+							
+								+product-card({
+									src: './images/prod-06.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: '',
+									price: '999,99 р.',
+									sale: '1000 р.',
+									qty_backet: '1',
+									total: '999,99 р.'
+								})
+							.order-description
+								.order-description__item
+									.name Оплата
+									.detail Наличными при получении
+								.order-description__item
+									.name Доставка
+									.detail Бесплатно
+								.order-description__item
+									.name Срочная доставка
+									.detail 8 р.
+								.order-description__item
+									.name Итого
+									.total-price 1 544.48 р.
+						+accodeon-item({
+							head: '№ 789456123',
+							order_status: 'completed',
+						})
+							.order-list
+								+product-card({
+									src: './images/prod-01.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska». Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+									price: '500,20 р.',
+									sale: '600,20 р.',
+									total: '1 500,60 р.'
+								})
+						
+								+product-card({
+									src: './images/prod-09.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Рисовые хлебцы с молочным шоколадом, 34г',
+									favourite: true,
+									price: '8, 98 р.',
+									total: '26,94 р.'
+								})
+							
+								+product-card({
+									src: './images/prod-08.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: 'Консервы пастеризованные. Бульон куриный жидкий Консервы пастеризованные, 350 мл',
+									price: '0',
+									sale: '',
+									qty_backet: '',
+									total: '-'
+								})
+							
+								+product-card({
+									src: './images/prod-07.jpg',
+									status: true,
+									code: 'Код: 4744481010818',
+									title: 'Консервы пастеризованные. Бульон куриный жидкий, 350 мл',
+									price: '1 099,99 р.',
+									sale: '5 000 р.',
+									qty_backet: '3',
+									label_sale: 'Акция 50%',
+									total: '3 099,99 р.'
+								})
+							
+								+product-card({
+									src: './images/prod-06.jpg',
+									status: true,
+									code: 'Код: 4744481010818', 
+									title: '',
+									price: '999,99 р.',
+									sale: '1000 р.',
+									qty_backet: '1',
+									total: '999,99 р.'
+								})
+							.order-description
+								.order-description__item
+									.name Оплата
+									.detail Наличными при получении
+								.order-description__item
+									.name Доставка
+									.detail Бесплатно
+								.order-description__item
+									.name Срочная доставка
+									.detail 8 р.
+								.order-description__item
+									.name Итого
+									.total-price 1 544.48 р.

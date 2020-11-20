@@ -1,0 +1,37 @@
+
++include-style('index-slider-product-2')
+.index-slider-product-2
+	+lazy-img({
+		img: 'images/bg-leaf-wide.svg',
+		placeholder: pixel,
+		img_mod: 'index-slider-product-2__left-bg',
+		wrap_mod: 'index-slider-product-2__left-bg-wrap',
+		link: false,
+		aria_label: false,
+	})
+	+lazy-img({
+		img: 'images/bg-leaf-wide-right.svg',
+		placeholder: pixel,
+		img_mod: 'index-slider-product-2__right-bg',
+		wrap_mod: 'index-slider-product-2__right-bg-wrap',
+		link: false,
+		aria_label: false,
+	})
+
+	//- +slider-product({
+	//- 	title: 'Бестселлеры',
+	//- 	tab: true
+	//- })
+	//- 	+tab-item({
+	//- 		class: 'active',
+	//- 		linkname: 'Еда',
+	//- 	})
+	//- 	+tab-item({
+	//- 		linkname: 'Косметика',
+	//- 	})
+	//- 	+tab-item({
+	//- 		linkname: 'Аксессуары'
+	//- 	})
+	//- 	+tab-item({
+	//- 		linkname: 'Химия'
+	//- 	})

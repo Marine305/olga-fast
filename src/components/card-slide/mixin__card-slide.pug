@@ -1,0 +1,28 @@
+mixin card-slide(args={})
+	+include-style('card-slide')
+	if args.link
+		a(href=args.href || '#' aria-label=args.title class=args.class).card-slide
+			+lazy-img-slider({
+				img: args.img_src,
+				placeholder: pixel,
+				img_mod: 'card-slide__img',
+				wrap_mod: 'card-slide__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			.card-slide__descr
+				.title=args.title
+				block
+	else
+		.card-slide(class=args.class)
+			+lazy-img-slider({
+				img: args.img_src,
+				placeholder: pixel,
+				img_mod: 'card-slide__img',
+				wrap_mod: 'card-slide__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			.card-slide__descr
+				.title=args.title
+				block

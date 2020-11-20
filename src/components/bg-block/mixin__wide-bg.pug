@@ -1,0 +1,24 @@
+mixin bg-wide(args={})
+	+include-style('bg-block')
+	//- +bg-wide({
+	//- 	green: true,
+	//- 	left_close: true,
+	//- 	right: true,
+	//- })
+	.bg-wide
+		if args.green === true
+			if args.left === true
+				+icon('bg-leaf-wide')(style='width:1012px;height:521px;stroke:#8DC63F;fill:none').left-icon
+			if args.left_close === true
+				+icon('bg-leaf-wide')(style='width:1012px;height:521px;stroke:#8DC63F;fill:none').left-icon-close
+			if args.right === true
+				+icon('bg-leaf-wide-right')(style='width:595px;height:622px;stroke:#8DC63F;fill:none').right-icon
+			if args.right_close === true
+				+icon('bg-leaf-wide-right')(style='width:595px;height:622px;stroke:#8DC63F;fill:none').right-icon-close
+		else 
+			if args.left === true
+				+icon('bg-leaf-wide')(style='width:1012px;height:521px;stroke:#ffffff;fill:none').left-icon
+			if args.left_close === true
+				+icon('bg-leaf-wide')(style='width:1012px;height:521px;stroke:#ffffff;fill:none').left-icon-close
+			if args.right === true
+				+icon('bg-leaf-wide-right')(style='width:595px;height:622px;stroke:#ffffff;fill:none').right-icon

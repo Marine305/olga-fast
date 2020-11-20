@@ -1,0 +1,8 @@
+mixin notify(args= {})
+	+include-script('notify')
+	.notify.js-notify.hidden&attributes(attributes)
+		.notify-container
+			.notify-close.js-btn-toggle(data-target='.notify')
+			.notify-title= args.title
+			.notify-body
+				block

@@ -1,0 +1,42 @@
++b.breadcrumb.breadcrumb--menu(style='visibility: hidden')
+	+e('ul').__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			a(href="/" title="Главная" itemprop="item")
+				span(itemprop="name") Главная
+				meta(itemprop="position" content="0")
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			a(href="#" title="Внутренняя" itemprop="item")
+				span(itemprop="name") Внутренняя1
+				meta(itemprop="position" content="2")
+			ul.drop-breadcrmb
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 1
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 2
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 3
+		+e('li').__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			a(href="#" title="Внутренняя" itemprop="item")
+				span(itemprop="name") Внутренняя2
+				meta(itemprop="position" content="2")
+			ul.drop-breadcrmb
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 1
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 2
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 3
+		+e('li').__item.--mobile(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			a(href="#" title="Внутренняя" itemprop="item")
+				span(itemprop="name") Внутренняя3
+				meta(itemprop="position" content="2")
+			ul.drop-breadcrmb
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 1
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 2
+				li.drop-breadcrmb__item
+					a(href="#").drop-breadcrmb__link Ссылка 3
+		+e('li').__item.active(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+			span(itemprop="name") Эталонка
+			meta(itemprop="position" content="2")

@@ -1,0 +1,15 @@
+
+.btn[disabled], .btn.disabled {
+  cursor: default !important;
+  color: #fff !important;
+  border-color: #d8d8d8 !important;
+  background: #d8d8d8 !important;
+  box-shadow: none !important;
+  &:hover, &:active {
+    cursor: default !important;
+    color: #fff !important;
+    border-color: #d8d8d8 !important;
+    background: #d8d8d8 !important;
+    box-shadow: none !important;
+  }
+}

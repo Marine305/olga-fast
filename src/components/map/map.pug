@@ -1,0 +1,75 @@
++include-style('map')
+.map-wrap
+	.map#map
+	include ../form-contacts/form-contacts
+	script.
+		window.addEventListener( 'load', function( event ) {
+			window.vendorLoader({
+				name: 'contact-map',
+				path: 'https://api-maps.yandex.ru/2.1/?&lang=ru_RU',
+				http: true,
+				event: {
+					scroll: true,
+					click: true,
+					mouseover: {
+						trigger: '#map'
+					}
+				},
+				callback: function callback() {
+					ymaps.ready(init);
+					var myMap, 
+						myPlacemark;
+
+					function init(){ 
+						myMap = new ymaps.Map ("map", {
+							center: [53.879079, 27.605543],
+							zoom: 12,
+							controls: []
+						});
+						
+						myPlacemark = new ymaps.Placemark([53.879079, 27.605543], {
+							hintContent: 'ТЦ «Корона»',
+							balloonContentHeader: 'ТЦ «Корона»',
+							balloonContentBody: 'Беларусь, Минск, Партизанский пр-т, 20а',
+						}, {
+							iconLayout: 'default#image',
+							iconImageHref: './images/map-marker.svg',
+							iconImageSize: [49, 41],
+						});
+						//отключаем зум колёсиком мышки
+						myMap.behaviors.disable('scrollZoom');
+						var zoomControl = new ymaps.control.ZoomControl({
+							options: {
+								size: 'small',
+								position: {
+									top: 200,
+									bottom: 'auto',
+									right: 15 
+								}
+							}
+						}),
+						MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+							'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+						);
+				
+					myMap.controls.add(zoomControl);
+						//на мобильных устройствах (проверяем по userAgent браузера)
+						if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						// отключаем перетаскивание карты
+							myMap.behaviors.disable('drag');
+						}
+						myMap.geoObjects.add(myPlacemark);
+					}
+
+
+				}
+			})
+		});
+
+
+
+
+
+
+
+script(type="text/javascript" src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU")

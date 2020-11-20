@@ -1,0 +1,58 @@
+mixin contacts-card(args={})
+	+include-style('contacts-card')
+	.contacts-card(class=args.class)
+		if args.class === 'rotate-card'
+			.contacts-card__front
+				+lazy-img-slider({
+					img: args.src,
+					placeholder: pixel,
+					img_mod: 'contacts-card__img',
+					wrap_mod: 'contacts-card__img-wrap',
+					link: false,
+					aria_label: false,
+				})
+				
+				+lazy-bg-slider({
+					img: 'images/bg-map.jpg',
+					img_mod: 'contacts-card__bg',
+					wrap_mod: 'contacts-card__bg-wrap',
+					link: false,
+					aria_label: false,
+				})
+				.title=args.title
+			.contacts-card__descr
+				.location.contacts-card__item
+					+icon('i-location')(style='width:24px;height:24px;fill:#8DC63F')
+					span=args.location
+				.work-time.contacts-card__item
+					+icon('i-clock')(style='width:24px;height:24px;fill:#8DC63F')
+					span=args.work_time
+				.phone.contacts-card__item
+					+icon('i-tel')(style='width:24px;height:24px;fill:#8DC63F')
+					a(href=`telto: ${args.phone}` aria-label=`Позвонить ${args.phone}`).cont-link=args.phone
+				.email.contacts-card__item
+					+icon('i-email')(style='width:24px;height:24px;fill:#8DC63F')
+					a(href=`mailto: ${args.email}` aria-label=`Написать на ${args.email}`).cont-link=args.email
+		else
+			+lazy-img({
+				img: args.src,
+				placeholder: pixel,
+				img_mod: 'contacts-card__img',
+				wrap_mod: 'contacts-card__img-wrap',
+				link: false,
+				aria_label: false,
+			})
+			.contacts-card__descr
+				.title=args.title
+				.location.contacts-card__item
+					+icon('i-location')(style='width:24px;height:24px;fill:#8DC63F')
+					span=args.location
+				.work-time.contacts-card__item
+					+icon('i-clock')(style='width:24px;height:24px;fill:#8DC63F')
+					span=args.work_time
+				.phone.contacts-card__item
+					+icon('i-tel')(style='width:24px;height:24px;fill:#8DC63F')
+					a(href=`telto: ${args.phone}` aria-label=`Позвонить ${args.phone}`).cont-link=args.phone
+				.email.contacts-card__item
+					+icon('i-email')(style='width:24px;height:24px;fill:#8DC63F')
+					a(href=`mailto: ${args.email}` aria-label=`Написать на ${args.email}`).cont-link=args.email

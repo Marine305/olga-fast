@@ -1,0 +1,11 @@
++include-style('inner-pages')
+.no-critical
+	.container
+		.page-error
+			.page-error-num 
+				span 404
+			.page-error-title Такой страницы нет
+			.page-error-desc Возможно введен неверный адрес страницы <br>или страница была удалена с сервера
+			.page-error-action
+				a.btn.btn--primary.page-error-btn(href='/' aria-label='На главную') На главную
+				a.btn.btn--outline.page-error-btn(href='/catalog/' aria-label='Каталог товаров') Каталог товаров

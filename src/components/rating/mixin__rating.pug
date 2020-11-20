@@ -1,0 +1,6 @@
+mixin rating(args={})
+	+include-style('rating')
+	.rating&attributes(attributes)
+		.rating-container
+			- for (var x = 0; x < args.value; x++)
+				+icon('i-star')(style='width:14px;height:15px;fill:#FDCA33;').rating__icon

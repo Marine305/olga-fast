@@ -1,0 +1,23 @@
+@import '../../assets/css/common/components-import';
+.link-arrow {
+  &__link {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 20px;
+      color: $c-firm;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .icon {
+      transition: transform .3s;
+
+      will-change: transform;
+    }
+    &:hover {
+      .icon {
+        transform: translateX(7px);
+      }
+    }
+  }
+}

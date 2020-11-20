@@ -1,0 +1,41 @@
+@import '../../assets/css/common/components-import';
+.slider-brand {
+  position: relative;
+  z-index: 3;
+  padding: 80px 0;
+  &__title {
+    justify-content: center;
+  }
+  @media (max-width: 575px) {
+    padding: 60px 0;
+  }
+}
+.swiper-brand {
+  height: 200px;
+  .swiper-container {
+    position: relative;
+    overflow: hidden;
+    margin: -15px;
+    padding: 15px;
+    &:not(.swiper-container-initialized) {
+      .swiper-slide {
+        max-width: 255px;
+        margin: 0 1px 0 0;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  @media (max-width: 575px) {
+    .swiper-container {
+			&:not(.swiper-container-initialized) {
+				.swiper-slide {
+					max-width: 100%;
+					width: calc(100vw - 30px);
+					margin: 0 auto;
+				}
+			}
+		}
+  }
+}

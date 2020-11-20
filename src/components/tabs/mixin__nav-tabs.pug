@@ -1,0 +1,6 @@
+mixin nav-tabs(args = {})
+	+include-script('tabs')
+	+include-style('tabs')
+	.nav-tabs-wrap(class= args.wrap_mod)
+		ul.nav.nav-tabs(role='tablist')&attributes(attributes)
+			block

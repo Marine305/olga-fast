@@ -1,0 +1,20 @@
+mixin news-card(args={})
+	+include-style('news-card')
+	.news-card(class=args.class)
+		a(href=args.href || '/local/templates/html/blog-inner-page.html', class='news-card__link')
+			if args.src
+					+#{args.slider ? 'lazy-img-slider' : 'lazy-img'}({
+						img: args.src,
+						placeholder: pixel,
+						img_mod: 'news-card__img',
+						wrap_mod: 'news-card__img-wrap',
+						link: false,
+						aria_label: false,
+					})
+			else
+				.news-card__img-wrap(style='display:none')
+		
+			.news-card__descr
+				.date=args.date
+				.title=args.title
+			block

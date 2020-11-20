@@ -1,0 +1,103 @@
+@import '../../assets/css/common/components-import';
+.counter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 33px;
+  background-color: $c-main;
+  .disabled-text {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+    color: $c-error;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+.basket-small .disabled-text {
+  top: 120%;
+  width: 200px;
+  font-size: 11px;
+}
+.basket-page .disabled-text, .basket-small .disabled-text {
+  top: 100%;
+}
+.counter-input {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 85px;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  color: $c-text;
+  border-radius: 33px;
+  outline: none;
+  background-color: $c-main;
+  font-size: 18px;
+  line-height: 1;
+  &:focus {
+    border: 1px solid $c-firm;
+  }
+}
+.counter-btn {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: $c-trp;
+  background: $c-trp;
+  font-size: 0;
+  &:before, &:after {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: calc(50% - 5px);
+    display: block;
+    width: 10px;
+    height: 2px;
+    content: '';
+    background: $c-firm;
+  }
+  &:before {
+    transform: rotate(-90deg);
+  }
+  &[disabled], &.disabled {
+    cursor: default;
+    &:before, &:after {
+      background: $c-link;
+    }
+  }
+}
+.counter-minus {
+  order: -1;
+  &:before {
+    display: none;
+  }
+}
+.counter-plus {
+  &[disabled], &.disabled {
+    & ~ .disabled-text {
+      display: block;
+    }
+  }
+}
+@media (min-width: $xl) {
+  .counter-btn {
+    &:hover {
+      &:before, &:after {
+        background: #83af40;
+      }
+    }
+  }
+}
+
+
+// @import "--price";

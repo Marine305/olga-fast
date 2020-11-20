@@ -1,0 +1,58 @@
++include-style('form-contacts')
+.form-contacts-wrap
+	.container
+		.form-contacts
+			.form-contacts__title Связаться с нами
+			form.bv-form
+				.form-contacts__form
+					+input({
+						label: 'Ваше имя',
+						type: 'text',
+						name: false,
+						small: false,
+						placeholder: 'Александр',
+						required: true,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+input({
+						label: 'E-mail',
+						type: 'email',
+						name: false,
+						small: false,
+						placeholder: 'example@example.com',
+						required: true,
+						pattern: 'email',
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+input({
+						label: 'Телефон',
+						type: 'tel',
+						name: false,
+						small: false,
+						placeholder: '+375 (__) ___-__-__',
+						required: true,
+						pattern: 'phone',
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+textarea({
+						label: 'Ваше сообщение',
+						required: false,
+						small: false,
+						placeholder: '',
+					})()
+					button.btn.btn--primary.btn--large Отправить

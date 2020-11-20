@@ -1,0 +1,60 @@
+@import 'src/assets/css/common/components-import';
+
+.contact-nav {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 8px 0;
+		&:hover {
+			.contact-nav__link {
+				color: $c-firm;
+			}
+			.icon {
+				fill: $c-firm;
+			}
+		}
+	}
+	&__link {
+		color: $white;
+		font-size: 15px;
+		line-height: 1.1;
+		margin-left: 5px;
+		transition: color .2s;
+	}
+	.icon {
+		transition: fill  .2s;
+		fill: $white;
+		margin-right: 7px;
+	}
+}
+
+@media (max-width: $sm - 1px) {
+
+}
+@media (min-width: $sm) {
+
+}
+@media (min-width: $sm) and (max-width: $md - 1px) {
+
+}
+@media (max-width: $md - 1px) {
+
+}
+@media (min-width: $md) {
+
+}
+@media (min-width: $md) and (max-width: $lg - 1px) {
+
+}
+@media (min-width: $lg) {
+	
+}
+@media (min-width: $lg) and (max-width: $xl - 1px) {
+
+}
+@media (min-width: $xl) {
+
+}

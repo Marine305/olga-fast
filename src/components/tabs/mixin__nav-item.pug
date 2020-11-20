@@ -1,0 +1,27 @@
+mixin nav-item(args ={})
+	+include-script('tabs')
+	+include-style('tabs')
+	li.nav-item(class= args.mod)
+		if (args.active)
+			if (args.is_link)
+				a.nav-link.active(href='#')&attributes(
+				attributes)
+					span
+						block
+
+			else
+				.nav-link.active(id='ID' + args.id + '-LINK' + args.count, class= args.link_mod, data-toggle='tab', data-target='#' + 'ID' + args.id + '-TAB' + args.count, role='tab', aria-selected='true')&attributes(
+				attributes)
+					span
+						block
+
+		else
+			if (args.is_link)
+				a.nav-link(href='#')&attributes(
+				attributes)
+					span
+						block
+			else
+				.nav-link(id='ID' + args.id + '-LINK' + args.count, class= args.link_mod, data-toggle='tab', data-target='#' + 'ID' + args.id + '-TAB' + args.count, role='tab', aria-selected='false')&attributes(attributes)
+					span
+						block

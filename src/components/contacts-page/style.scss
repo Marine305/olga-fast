@@ -1,0 +1,136 @@
+@import 'src/assets/css/common/components-import';
+
+// .window-wide-block {
+// 	position: relative;
+// 	z-index: 2;
+// 	height: 317px;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	&::after{
+// 		@include pseudo;
+// 		top: 0;
+// 		left: -50vw;
+// 		width: 200vw;
+// 		height: 317px;
+// 		background: $c-firm;
+// 		z-index: -1;
+// 		overflow: hidden; 
+// 	}
+// 	&::before{
+// 		@include pseudo;
+// 		top: 0;
+// 		left: -50vw;
+// 		width: 200vw;
+// 		height: 100%;
+// 		background: url('../../images/bg-veska.svg') 0 50%;
+// 		background-size: contain;
+// 		opacity: .5;
+// 		z-index: 1;
+// 	}
+// 	img {
+// 		position: relative;
+// 		z-index: 2;
+// 	}
+// }
+
+.pseudo-container{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	position: relative;
+	z-index: 1;
+	line-height: 1.4;
+	&::before{
+		@include pseudo;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../../images/bg-veska.svg') no-repeat;
+		background-position: 0 0;
+		background-size: 100%;
+		opacity: .1 ;
+		z-index: 2;
+		overflow: hidden;
+	}
+	.pseudo-bg {
+		position: relative;
+		z-index: 1;
+		margin-top: 20px;
+		padding: 45px;
+		width: 510px;
+		height: auto;
+		background: $c-main;
+		border-radius: 22px 0 0 0;
+		&::after {
+			@include pseudo;
+			z-index: -1;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+			background: url('../../images/pseudo-pic.jpg') no-repeat;
+			background-size: cover;
+		}
+		&__text {
+			width: calc(100% + 272px);
+			color: $white;
+			font-weight: 300;
+			font-size: 22px;
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	@media (max-width: 1420px) {
+		.pseudo-bg {
+			&__text {
+				width: calc(100% + 100px);
+			}
+		}
+	}
+	@media (max-width: 1100px) {
+		.pseudo-bg {
+			&__text {
+				width: calc(100% + 50px);
+			}
+		}
+	}
+	@media (max-width: 1024px) {
+		.pseudo-bg {
+			padding: 30px 0 30px 30px;
+			width: 350px;
+			&__text {
+				font-size: 18px;
+				width: 100%;
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	@media (max-width: 575px) {
+		&::before{
+			left: -15px;
+			width: 100vw;
+		}
+		.pseudo-bg {
+			border-radius: 0;
+			width: 100vw;
+			padding: 30px 15px;
+			margin-left: -15px;
+			margin-bottom: 180px;
+			&::after {
+				@include pseudo;
+				z-index: -1;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				height: 150px;
+				background: url('../../images/pseudo-pic.jpg') no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}

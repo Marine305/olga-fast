@@ -1,0 +1,77 @@
++include-style('etalon')
++content()
+- var tabId = getRandom()
+	.container
+		+nav-tabs({
+			wrap_mod: ''
+		}).etalon-nav-tabs
+			+nav-item({id: tabId, count: 1, active: true})
+				| Типография
+			+nav-item({id: tabId, count: 2})
+				| Картинки и видео
+			+nav-item({id: tabId, count: 3})
+				| Списки
+			+nav-item({id: tabId, count: 4})
+				| Слайдеры
+			+nav-item({id: tabId, count: 5})
+				| Аккордеоны
+			+nav-item({id: tabId, count: 6})
+				| Табы
+			+nav-item({id: tabId, count: 7})
+				| Таблицы
+			+nav-item({id: tabId, count: 8})
+				| Элементы форм
+			+nav-item({id: tabId, count: 9})
+				| Кнопки
+			+nav-item({id: tabId, count: 10})
+				| Пагинация
+			+nav-item({id: tabId, count: 11})
+				| Блок Поделиться
+			+nav-item({id: tabId, count: 12})
+				| Модалки
+			+nav-item({id: tabId, count: 13})
+				| Прелоадер
+			+nav-item({id: tabId, count: 14})
+				| Иконки
+			+nav-item({id: tabId, count: 15})
+				| Тултипы
+			+nav-item({id: tabId, count: 16})
+				| Навигация
+		.content
+			.row
+				.col-12
+					.container
+
+						+tab-content()
+							+tab-pane({id: tabId, count: 1, active: true})
+								include pane-typography
+							+tab-pane({id: tabId, count: 2})
+								include pane-images
+							+tab-pane({id: tabId, count: 3})
+								include pane-list
+							+tab-pane({id: tabId, count: 4})
+								include pane-sliders
+							+tab-pane({id: tabId, count: 5})
+								include pane-accordion
+							+tab-pane({id: tabId, count: 6})
+								include page-tabs
+							+tab-pane({id: tabId, count: 7})
+								include pane-table
+							+tab-pane({id: tabId, count: 8})
+								include pane-form
+							+tab-pane({id: tabId, count: 9})
+								include pane-buttons
+							+tab-pane({id: tabId, count: 10})
+								include pane-pagination
+							+tab-pane({id: tabId, count: 11})
+								h3 Блок Поделиться
+							+tab-pane({id: tabId, count: 12})
+								include pane-modal
+							+tab-pane({id: tabId, count: 13})
+								include pane-preloader
+							+tab-pane({id: tabId, count: 14})
+								include pane-icons
+							+tab-pane({id: tabId, count: 15})
+								include pane-tooltip
+							+tab-pane({id: tabId, count: 16})
+								include pane-nav

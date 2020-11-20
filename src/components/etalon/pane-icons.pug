@@ -1,0 +1,17 @@
+h3 Маркер карты
+img(src='images/map-marker.svg')
+hr
+h3 Иконки
+
+.etalon-icons
+	include ../../assets/sprites/svg/svg
+	each svg_name in $svg
+		+icon(svg_name)
+style.
+	.etalon-icons .icon {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+		fill: #000;
+	}

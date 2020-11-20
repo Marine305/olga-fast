@@ -1,0 +1,60 @@
++include-style('footer')
+
+.container
+	.footer
+		.footer-main
+			.footer-main__col
+				.footer-title.footer-title--toggle
+					span Каталог
+					.js-btn-toggle(data-target=".footer-nav-catalog")
+					+icon('i-arrow-xl')(style='width: 17px; height: 17px; fill: #fff')
+				.footer-nav.footer-nav-catalog
+					+nav({
+						list: [
+							{name: 'Эко Еда'},
+							{name: 'Детям'},
+							{name: 'Веганам'},
+							{name: 'Эко косметика', active: true, span: true},
+							{name: 'Эко дом'},
+							{name: 'Для питомцев'},
+							{name: 'Акции'},
+							{name: 'Подарки'}
+						]
+					})
+			.footer-main__col
+				.footer-title.footer-title--toggle
+					span Информация
+					.js-btn-toggle(data-target=".footer-nav-info")
+					+icon('i-arrow-xl')(style='width: 17px; height: 17px; fill: #fff')
+				.footer-nav.footer-nav-info
+					+nav({
+						list: [
+							{name: 'Био органика'},
+							{name: 'Программа лояльности'},
+							{name: 'Блог'},
+							{name: 'Доставка и оплата'},
+							{name: 'О компании'},
+							{name: 'Потребителям'},
+							{name: 'Магазины'},
+							{name: 'Контакты'}
+						]
+					})
+		
+			.footer-main__col
+				.footer-title Контакты
+				+contact
+				include ../social/social
+			.footer-main__col
+				p Общество с ограниченной ответственностью «БиоМельница» (ООО «БиоМельница»).
+				p Юридический адрес: 220062 г. Минск, пр. Победителей, д. 129, офис 329, УНП 193076712, ОКПО 501848735000
+				+icon('i-visa')(style='width: 63px; height: 21px; fill: #fff; opacity: 0.4')
+				+icon('i-visa-verif')(style='width: 40px; height: 20px; fill: #fff; opacity: 0.4')
+				+icon('i-mastercard')(style='width: 31px; height: 24px; fill: #fff; opacity: 0.4')
+				+icon('i-mastercard-sec')(style='width: 66px; height: 20px; fill: #fff; opacity: 0.4')
+
+		.footer-bottom
+			.footer-bottom__col
+				.footer-bottom-text 2020 © veska.shop
+			.footer-bottom__col
+				+slam()
+

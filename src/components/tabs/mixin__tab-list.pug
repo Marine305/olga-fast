@@ -1,0 +1,11 @@
+mixin tab-list(args ={})
+	+include-style('tabs')
+	.tab
+		ul.tab__list
+			block
+
+mixin tab-item(args ={})
+	+include-style('tabs')
+
+	li.tab__item(class=args.class)
+		a(href=args.href || "#").tab__link=args.linkname

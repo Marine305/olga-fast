@@ -1,0 +1,55 @@
+mixin slider-shops(args= {})
+	+include-style('slider-shops')
+	+include-script('slider-shops')
+	.slider-shops
+		h2.slider-shops__title=args.title
+		+swiper({
+			wrapper_mod: '',
+			container_mod: '',
+			pagination_mod: '',
+			arrow_prev_mod: 'custom-swiper-btn__prev',
+			arrow_next_mod: 'custom-swiper-btn__next',
+			pagination: true,
+			navigation: true,
+		}).swiper-shops.js-swiper-shops
+			//- Слайды
+			.swiper-slide
+				+contacts-card({
+					class: 'rotate-card',
+					src: './images/cont-momo.jpg',
+					title: 'ТЦ «Момо»',
+					location: 'Беларусь, Минск, Партизанский пр-т, 20а',
+					work_time: 'Без выходных 10:00–22:00',
+					phone: '+375 29 500-50-10',
+					email: 'info@veska.shop',
+				})
+			.swiper-slide
+				+contacts-card({
+					class: 'rotate-card',
+					src: './images/cont-korona.jpg',
+					title: 'ТЦ «Корона»',
+					location: 'Беларусь, Минск, Партизанский пр-т, 20а',
+					work_time: 'Без выходных 10:00–22:00',
+					phone: '+375 29 500-50-10',
+					email: 'info@veska.shop',
+				})
+			.swiper-slide
+				+contacts-card({
+					class: 'rotate-card',
+					src: './images/cont-prostore.jpg',
+					title: 'ТЦ «ПроСтор Северный» ',
+					location: 'Беларусь, Минск, Партизанский пр-т, 20а',
+					work_time: 'Без выходных 10:00–22:00',
+					phone: '+375 29 500-50-10',
+					email: 'info@veska.shop',
+				})
+			.swiper-slide
+				+contacts-card({
+					class: 'rotate-card',
+					src: './images/blog-01.jpg',
+					title: 'ТЦ «sxdfsdfsdfsdf »',
+					location: 'Беларусь, Минск, Партизанский пр-т, 20а',
+					work_time: 'Без выходных 10:00–22:00 ',
+					phone: '+375 29 500-50-10',
+					email: 'info@veska.shop',
+				})

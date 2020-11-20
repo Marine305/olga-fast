@@ -1,0 +1,35 @@
++include-style('index-news-block')
+.index-news-block-wrap
+	.index-news-block
+		.news-block
+			.index-news-block__title Новости компании
+			.index-news-block__body
+				+news-card({
+					class: 'news-small',
+					date: '12 июня 2020',
+					title: 'Как сделать идеальный чай со льдом'
+				})
+			
+				+news-card({
+					class: 'news-small',
+					date: '12 июня 2020',
+					title: 'Растительное молоко или напиток, и почему стоит пить овощные напитки'
+				})
+			
+				+news-card({
+					class: 'news-small',
+					date: '12 июня 2020',
+					title: 'Нужно ли использовать солнцезащитные средства в помещении?'
+				})
+			+link-arrow({
+				title: 'Все новости'
+			})
+
+		.blog-block
+			.index-news-block__title VESKA-блог
+			+link-arrow({
+				title: 'Читать блог'
+			})
+			.index-news-block__body
+				+slider-index-news
+				

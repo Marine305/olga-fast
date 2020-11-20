@@ -1,0 +1,21 @@
+.search-page
+	
+	form.search-page__form(action='#')
+		input.search-page__input.form-control(type='search', value='Смысл жизни')
+		button.btn.btn--sm Искать
+	
+	.search-page__result Всего найдено: <b>0</b> по запросу "<b>Смысл жизни</b>"
+	
+	ol.search-list
+
+		- var i = 0
+		while i < 4
+			- i++
+		
+			li.search-list__item
+				a.search-list__header(href='#') Найти #[b смысл жизни] в Минске
+				.search-list__content
+					p Lorem ipsum dolor sit amet #[b смысл жизни] consectetur adipisicing elit. Nihil doloribus #[b смысл жизни] aut mollitia animi eos commodi, blanditiis possimus maiores #[b смысл жизни] voluptatibus inventore fugiat nulla ad. In neque quas unde placeat, beatae eaque!
+
+	
+	include ../pagination/pagination

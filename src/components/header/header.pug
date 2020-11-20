@@ -1,0 +1,33 @@
++include-script('header')
++ajax()
+
+.header.js-header
+	.header-container
+		.mob-nav-toggle.js-btn-toggle(
+			data-ajax='true',
+			data-ajax-src='/local/templates/html/components-template/mob-menu/ajax__mob-menu.html',
+			data-ajax-event='click touch',
+			data-ajax-target='.mob-menu-container',
+			data-ajax-reinit='select',
+			data-target='.mob-menu',
+			aria-label='открыть меню')
+			span
+			span
+			span
+		.header-logo
+			a.logo(href='/local/templates/html/index.html', aria-label='На главную')
+				picture
+					source(media="(max-width: 575px)" srcset="./images/logo.png")
+					source(media="(min-width: 576px)" srcset="./images/logo.png")
+					img(src="./images/logo-light.svg", alt="#").logo__img
+		+nav({
+			compress: false,
+			list: [
+				{name: 'Об авторе', link: './about.html'},
+				{name: 'Стихи', link: './poem.html'},
+				{name: 'Песни', link: './song.html'},
+				{name: 'Галерея', link: './photo.html'},
+				{name: 'Блог', link: './news.html'},
+			]
+		})
+	include ../mob-menu/mob-menu

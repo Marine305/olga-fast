@@ -1,0 +1,3 @@
+mixin badge(args={})
+	+include-style('badge')
+	.badge(style='background-color:'+args.bg+'; color: '+args.color+';')&attributes(attributes)= args.value

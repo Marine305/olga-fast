@@ -1,0 +1,9 @@
+mixin tab-pane(args = {})
+	+include-script('tabs')
+	+include-style('tabs')
+	if (args.active)
+		.tab-pane.fade.show.active(id= 'ID' + args.id + '-TAB' + args.count, class= args.mod role='tabpanel')&attributes(attributes)
+			block
+	else
+		.tab-pane.fade(id= 'ID' + args.id + '-TAB' + args.count, class= args.mod role='tabpanel')&attributes(attributes)
+			block

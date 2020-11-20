@@ -1,0 +1,9 @@
+mixin social-list()
+	+include-style('social-list')
+	.social-list&attributes(attributes)
+		a.social(href='#', aria-label='vkontakte')
+			+icon('vk')(style='width:24px; height:24px').social__icon
+		a.social(href='#', aria-label='facebook')
+			+icon('fb')(style='width:24px; height:24px').social__icon
+		a.social(href='#', aria-label='instagram')
+			+icon('ig')(style='width:24px; height:24px').social__icon

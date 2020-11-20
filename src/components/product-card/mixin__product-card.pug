@@ -1,0 +1,105 @@
+mixin product-card(args={})
+	+include-style('product-card')
+
+	.product-card(
+		class= args.class_mod
+		class= args.status ? 'product-true' : 'product-false',
+		class= args.ajax && 'product-card-ajax'
+		)
+
+		.product-card__container
+			if args.ajax === true
+				a(href=args.href || '/local/templates/html/product-page.html' aria-label= args.title).title=args.title
+			else
+				.product-card__head
+					.label-list
+						if args.label_sale
+							.label-list__item.label-sale= args.label_sale
+						if args.label_new
+							.label-list__item.label-new= args.label_new
+						if args.label_recomend
+							.label-list__item.label-recomend= args.label_recomend
+						if args.label_tooltip
+							.label-list__item.label-tooltip.tooltip-parent(class=args.label_mod)=args.label_tooltip
+								.tooltip-2 
+									p Мы хотим сделать ваш клиентский опыт максимально комфортным и безопасным. Для этого мы ввели бесконтактную доставку. Чтобы помочь уменьшить распространение Covid-19 через контакт людей, мы можем оставить ваш заказ рядом с дверью. После доставки наш курьер отойдет от вашей двери, а затем позвонит вам, чтобы вы забрали заказ. Пожалуйста, обратите внимание, что при бесконтактной доставке принимается только онлайн-оплата
+					.close
+						+icon('i-close')(style='width:26px; height:26px;')
+				if args.src
+					+#{args.slider ? 'lazy-img-slider' : 'lazy-img'}({
+						img: args.src,
+						placeholder: pixel,
+						img_mod: 'product-card__img',
+						wrap_mod: 'product-card__img-wrap',
+						link: true,
+						href: '/local/templates/html/product-page.html',
+						aria_label: true,
+					})
+				else
+					.product-card__img-wrap(style='display:none')
+				.product-card__body
+					.product-card__descr-wrap
+						.product-card__descr
+							.status
+								if args.status === true
+									.status__true В наличии
+								else
+									.status__false Отсутствует
+							.code=args.code
+						if args.title
+							a(href=args.href || '/local/templates/html/product-page.html').title=args.title
+						else
+							.title(style='display:none')
+					.product-card__footer
+						if !args.price
+							.product-card__price-wrap.price-wrap-empty
+								.price
+						else
+							.product-card__price-wrap
+								if args.qty
+									.qty=args.qty
+								if args.order_ready
+									.order-ready=args.order_ready
+
+								.price!=args.price
+								if args.sale
+									.sale=args.sale
+								else
+									.sale(style='display:none')
+							if args.price_per_kg
+								.price-per-kg=args.price_per_kg
+						.product-card__counter
+							if args.status === false
+								.btn.btn--outline.btn--error Сообщить о&nbsp;наличии
+							else
+								+counter({
+									max_value: min_value * 2,
+									min_value: 0.805,
+									baseStep: 0.805,
+									step: 0.805
+								})
+								//- a.btn.btn--outline(href="#one-click-buy" data-toggle='modal' aria-label='Купить в 1 клик') Купить в 1 клик
+								.btn.btn--primary В корзину
+						if !args.qty_backet
+							.backet.backet--empty
+								.qty-backet=args.qty_backet || 0
+								.icon(style='width:36px; height:36px; fill:#8DC63F')
+								span В корзине
+						else
+							.backet
+								.qty-backet=args.qty_backet || 0
+								.icon(style='width:36px; height:36px; fill:#8DC63F')
+								span В корзине
+						if args.favourite
+							.favourite.active
+								+icon('i-like')(style='width:26px; height:26px;')
+								span В избранном
+						else
+							.favourite
+								+icon('i-like')(style='width:26px; height:26px;')
+								span В избранное
+
+					.product-card__total
+						if args.total
+							span Итого:
+							.product-card__total-price=args.total

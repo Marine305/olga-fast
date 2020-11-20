@@ -1,0 +1,76 @@
++include-style('favourite-page')
++include-style('catalog')
+
+.container
+	.row
+		.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+			.favourite-page
+				+tab-list
+					+tab-item({
+						linkname: 'Профиль',
+						href: '/local/templates/html/profil.html',
+					})
+					+tab-item({
+						linkname: 'Программа лояльности',
+						href: '/local/templates/html/loyalty.html',
+					})
+					+tab-item({
+						linkname: 'Заказы',
+						href: '/local/templates/html/order.html',
+					})
+					+tab-item({
+						class: 'active',
+						linkname: 'Избранное',
+					})
+			
+				.catalog-panel.catalog-panel--list
+					.catalog-panel__item
+						+product-card({
+							src: './images/logo-light.svg',
+							status: false,
+							code: 'Код: 4744481010818', 
+							title: 'Консервы пастеризованные. Бульон куриный жидкий, 350 мл',
+							price: '999,99 р.',
+							sale: '1000 р.',
+							label_sale: 'Акция -1%',
+							label_new: 'Новинка',
+							label_recomend: 'Рекомендуем',
+						})
+					.catalog-panel__item
+						+product-card({
+							src: './images/prod-09.jpg',
+							status: true,
+							code: 'Код: 4744481010818', 
+							title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska». Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+							price: '9,99 р.',
+							favourite: true,
+							label_recomend: 'Рекомендуем',
+						})
+					.catalog-panel__item
+						+product-card({
+							src: './images/prod-08.jpg',
+							status: false,
+							code: 'Код: 4744481010818', 
+							title: 'Консервы пастеризованные. Бульон куриный жидкий Консервы пастеризованные, 350 мл',
+							price: '',
+							sale: '',
+							qty_backet: '',
+							
+						})
+					.catalog-panel__item
+						+product-card({
+							src: './images/prod-07.jpg',
+							status: true,
+							code: 'Код: 4744481010818',
+							title: 'Амарант, зеленая гречка, киноа и другие крупы, миндальная мука, оливки и маслины, соусы и тапенады, кофе и чай, специи, натуральные масла и уксус, чипсы из водорослей и «живые» сладости без сахара, мясные изделия, овощная колбаса и бургеры, свежая выпечка, шампуни и кремы без парабенов и сульфатов, натуральная косметика – все это и многое другое представлено в «Vёska».',
+							price: '10 099,99 р.',
+							sale: '5 000 р.',
+							qty_backet: '3',
+							label_sale: 'Акция 50%',
+						})
+				.btn-wrap
+					.btn.btn--outline Перейти в корзину
+					.empty-recycle-bin.js-empty-recycle-bin
+						+icon('i-close')(style='width:20px; height:20px;')
+						span Убрать все
+				

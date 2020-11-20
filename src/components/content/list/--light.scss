@@ -1,0 +1,9 @@
+.content {
+	ul.list--light {
+		li {
+			&:before {
+				background-color: transparent;
+			}
+		}
+	}
+}

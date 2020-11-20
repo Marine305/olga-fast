@@ -1,0 +1,6 @@
+mixin link-arrow(args = {})
+	+include-style('link')
+	.link-arrow&attributes(attributes)
+		a(href=args.href ||'#' aria-label=`${args.title}`).link-arrow__link 
+			span=args.title
+			+icon('i-arrow-swiper')(style='width: 43px; height: 18px;fill:#8DC63F')

@@ -1,0 +1,40 @@
+mixin lazy-picture(args= {})
+	//- ПРИМЕР
+		+lazy-picture({
+			source: [
+				{
+					img: 'images/hero-img-1.jpg',
+					placeholder: 'images/placeholder/hero-img-1.jpg',
+					media: 1024
+				}, {
+					img: pixel,
+					placeholder: pixel,
+					media: 0
+				}
+			],
+			img: 'images/hero-img-1.jpg',
+			placeholder: 'images/placeholder/hero-img-1.jpg',
+			img_mod: 'CLASS-img',
+			wrap_mod: 'CLASS-img-wrap'
+		})
+	-
+		args.img = !args.http && args.img === pixel ? pixel : SITE_TEMPLATE_PATH + args.img
+		args.placeholder = !args.http && args.placeholder === pixel ? pixel : SITE_TEMPLATE_PATH + args.placeholder
+	if (args.link)
+		a.lazy-img-wrap(class= args.wrap_mod href='#' aria-label)
+			picture.lazy-img-wrap(class= args.wrap_mod)
+				each source in args.source
+					-
+						source.img = !args.http && source.img === pixel ? pixel : SITE_TEMPLATE_PATH + source.img
+						source.placeholder = !args.http && source.placeholder === pixel ? pixel : SITE_TEMPLATE_PATH + source.placeholder
+					source(data-srcset= source.img, srcset= source.placeholder, media='(min-width: ' + source.media + 'px)')
+				img.lazy-img(class= args.img_mod, data-src= args.img, src= args.placeholder,  alt='img')
+
+	else
+		picture.lazy-img-wrap(class= args.wrap_mod)
+			each source in args.source
+				-
+					source.img = !args.http && source.img === pixel ? pixel : SITE_TEMPLATE_PATH + source.img
+					source.placeholder = !args.http && source.placeholder === pixel ? pixel : SITE_TEMPLATE_PATH + source.placeholder
+				source(data-srcset= source.img, srcset= source.placeholder, media='(min-width: ' + source.media + 'px)')
+			img.lazy-img(class= args.img_mod, data-src= args.img, src= args.placeholder,  alt='img')

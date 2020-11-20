@@ -1,0 +1,42 @@
+extends ../layout/layout
+
+block vars
+	- var bodyClass = ''
+	- var footerClass = ''
+	- var headerClass = ''
+	- var pageTitle = 'Программа лояльности'
+	- var dir = './'
+	- var layout = ''
+
+block premain
+	.page-header-section
+		.container
+			.row
+				.col-12.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1.col-md-12
+					+breadcrumb({
+						content1: 'Личный кабинет',
+						href_content1: '/local/templates/html/profil.html',
+						content2: 'Программа лояльности',
+						
+					})
+					h1 История бонусных баллов
+
+block main
+	.no-critical.no-critical--preloader
+		include ../components/loyalty-page/loyalty-page
+
+block popups
+	include ../components/modal/modal-login/modal-login
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+
+block vendorScripts
+	+vendorScripts-includer()
+
+block componentsStyles
+	+style-includer()
+
+block componentsScripts
+	+componentsScripts-includer()
+
+block scripts
